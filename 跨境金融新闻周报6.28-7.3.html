@@ -91,7 +91,7 @@
   html { scroll-behavior: smooth; }
 
   /* ── Anchor offsets for each section ── */
-  #summary, #chart, #payment, #ecommerce, #logistics, #tax, #regulatory, #ahead {
+  #summary, #chart, #payment, #ecommerce, #logistics, #tax, #regulatory, #insights {
     scroll-margin-top: 190px;
   }
 
@@ -308,7 +308,7 @@
     <a href="#logistics">🚚 跨境物流</a><span class="sep">|</span>
     <a href="#tax">💰 税务合规</a><span class="sep">|</span>
     <a href="#regulatory">⚖️ 监管动向</a><span class="sep">|</span>
-    <a href="#ahead">🔭 下周关注</a>
+    <a href="#insights">💡 本周启示</a>
   </nav>
 </header>
 
@@ -647,55 +647,60 @@
   </div>
 </div>
 
-<!-- ═══ INSIGHTS ═══ -->
-<div class="section-title"><span>🔍 本周关键洞察</span></div>
-<div class="insight-row">
-  <div class="insight-item">
-    <h4>东南亚支付互联进入加速期</h4>
-    <p>越南-新加坡二维码互通是东盟第四个双边链路。加上 PayKKa 越南收单落地、连连×Coupang 全模式覆盖，东南亚跨境支付从"能收"进入"快收、多通道收"的新阶段。建议团队评估接入越南本地收单的可行性。</p>
-  </div>
-  <div class="insight-item">
-    <h4>稳定币赛道结构性震动</h4>
-    <p>OUSD 联盟吸引 140+ 企业组团入局，对 USDC/USDT 双寡头格局构成实质挑战。BIS 年度报告首次量化稳定币宏观影响并推荐央行统一账本。需持续关注 OUSD 合规进展及对现有跨境结算通道的潜在影响。</p>
-  </div>
-  <div class="insight-item">
-    <h4>关税 + 税务双重窗口逼近</h4>
-    <p>7 月 7 日美国关税听证 → 7 月 24 日临时附加税到期，加上墨西哥 RFC 回溯追税已开始执行。本周是物流和关务团队的关键决策窗口，建议优先完成美国关税影响评估和墨西哥站 RFC 核验。</p>
-  </div>
-</div>
+<!-- ═══ SECTION: INSIGHTS ═══ -->
+<div class="section-title" id="insights"><span>💡 本周新闻启示</span> 对支付业务 & 保险业务的参考方向</div>
 
-<!-- ═══ LOOKING AHEAD ═══ -->
-<div class="section-title" id="ahead"><span>🔭 下周关注与行动建议</span> 7月4日 – 10日</div>
-<div class="ahead-grid">
-  <div class="ahead-card">
-    <h4 style="color:var(--red);">📅 关键日程</h4>
-    <ul>
-      <li><strong>7/7</strong> 美 Section 301 关税调查听证会</li>
-      <li><strong>7/7</strong> TikTok Shop 减重增肌新规生效</li>
-      <li><strong>7/8</strong> 美国 CPSC eFiling 强制生效</li>
-      <li><strong>7/24</strong> 美 10% 临时附加税到期日</li>
-      <li><strong>—</strong> 东南亚 7.7 大促开启</li>
-    </ul>
-  </div>
-  <div class="ahead-card">
-    <h4 style="color:var(--orange);">👀 持续关注</h4>
-    <ul>
-      <li>越-新跨境二维码双向支付进展</li>
-      <li>OUSD 联盟稳定币上线及监管回应</li>
-      <li>墨西哥美客多 RFC 核查后续影响</li>
-      <li>泰国电商佣金监管政策落地细节</li>
-      <li>美制造业产能过剩 301 调查结果</li>
-    </ul>
-  </div>
-  <div class="ahead-card">
-    <h4 style="color:var(--green);">✅ 团队行动项</h4>
-    <ul>
-      <li>完成美国关税窗口影响评估报告</li>
-      <li>核验所有墨西哥站 RFC 绑定状态</li>
-      <li>评估接入 PayKKa 越南收单可行性</li>
-      <li>补充保险/信贷领域资讯来源渠道</li>
-      <li>关注 7.7 大促支付链路压力测试</li>
-    </ul>
+<div class="full-card" style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#FFF7F2;border-radius:10px;border-left:4px solid var(--orange);">
+      <span style="font-size:20px;min-width:28px;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--orange);margin-bottom:4px;">支付合作伙伴合规风险正在传导至业务链</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">连连支付接连被外管局+央行双罚、Sunrate持牌主体寻汇支付被罚没1342万、瀚银科技7445万刷新纪录——支付机构的合规缺陷不再只是自身问题，可能导致合作平台的资金流转受阻、备付金风险上升。建议建立合作PSP的常态化合规监控机制，重点关注持牌主体的行政处罚动态和牌照续展状态。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#FFF7F2;border-radius:10px;border-left:4px solid var(--orange);">
+      <span style="font-size:20px;min-width:28px;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--orange);margin-bottom:4px;">东南亚本地支付互联加速，收单接入窗口期开启</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">越南-新加坡跨境QR互通（东盟第四对双边链路）、PayKKa越南本地收单上线（无需本地法人即可接入ZaloPay/VietQR），显示东南亚支付基础设施正从"国别割裂"走向"区域互联"。对于有东南亚本地收单需求的平台，当前是评估多通道接入的合适时机，可关注NAPAS、Liquid Group等区域支付网络参与方的开放节奏。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#FFF7F2;border-radius:10px;border-left:4px solid var(--orange);">
+      <span style="font-size:20px;min-width:28px;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--orange);margin-bottom:4px;">稳定币从投机工具走向实际支付场景，跨境结算新通道值得跟踪</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">OUSD联盟集结140+企业（Visa、万事达卡、Stripe、BlackRock）推出免费铸造/赎回的联盟稳定币，加密支付卡全球充值额突破103亿美元（年内增82%）。稳定币正在跨境支付和高通胀地区结算中展现实际效用。BIS年度报告虽持审慎立场，但央行统一账本方向与多边数字货币桥（浙江2025年完成1220笔、99.5亿元交易）的试点推进值得持续跟踪。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#EEF3FF;border-radius:10px;border-left:4px solid var(--blue);">
+      <span style="font-size:20px;min-width:28px;">4</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--blue);margin-bottom:4px;">电商欺诈风险攀升 → 交易安全险和商户保障产品存在市场空间</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">马来西亚电商诈骗两年损失29.7亿令吉（案件翻倍至6万起），TikTok Shop东南亚严管减重增肌宣称，菲律宾加强家电安全认证执法——多国市场监管趋严叠加欺诈风险上升，跨境卖家在交易安全、Listing合规、产品责任等方面的保障需求正在增长。交易安全险、物流险、商户合规保障等产品方向值得关注。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#EEF3FF;border-radius:10px;border-left:4px solid var(--blue);">
+      <span style="font-size:20px;min-width:28px;">5</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--blue);margin-bottom:4px;">物流多点中断 → 货运险和供应链中断保障可作为商户服务延伸</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">委内瑞拉港口因地震停摆（马士基/MSC暂停业务）、俄线陆运费因油价上涨上调10%+、中美航线运费因关税窗口冲至两年高位——跨境物流的多点中断风险在本周集中暴露。亚马逊COO强制校验和联邦快递CPSC电子备案则从合规端抬升了发货门槛。货运险、供应链中断保障保险、关税变动损失补偿等产品方向，可作为商户增值服务的补充探索。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#FEF7EB;border-radius:10px;border-left:4px solid var(--amber);">
+      <span style="font-size:20px;min-width:28px;">6</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--amber);margin-bottom:4px;">关税政策频繁变动 → 关税损失保险和汇率避险工具需求上升</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">美国10%临时附加税7.24到期、对华拟征12.5%（7/7听证）、USTR制造业产能过剩调查覆盖16个经济体——关税政策的不确定性正在直接影响跨境卖家的定价和利润。墨西哥RFC回溯追税（差额25.5%逐笔补扣）则暴露了海外税务合规的隐性成本。针对关税变动和税务稽查的保障产品、以及更灵活的锁汇工具，可能成为卖家刚需。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#FEF7EB;border-radius:10px;border-left:4px solid var(--amber);">
+      <span style="font-size:20px;min-width:28px;">7</span>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:var(--amber);margin-bottom:4px;">"双罚制"成支付监管常态 → PSP合规能力成为选择合作伙伴的关键指标</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">瀚银科技、汇潮支付、易票联支付、寻汇支付、连连支付——本周收录的5起支付罚单全部实行机构+个人"双罚制"，且牌照续展受阻的机构仍被追溯处罚。监管对反洗钱、商户管理、金融科技合规的要求持续升级。在选择和评估支付合作伙伴时，"合规健康度"——包括持牌状态、历史罚单、高管追责记录——应作为与费率、到账速度同等重要的评估维度。</div>
+      </div>
+    </div>
   </div>
 </div>
 
