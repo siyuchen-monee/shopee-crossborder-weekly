@@ -87,13 +87,7 @@
   .header-bar a:hover, .header-bar a.active { background: #fff; color: var(--orange-dk); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
   .header-bar .sep { display: none; }
 
-  /* Anchor offset for sticky header */
-  html { scroll-behavior: smooth; }
-
-  /* ── Anchor offsets for each section ── */
-  #summary, #chart, #payment, #ecommerce, #logistics, #tax, #regulatory, #insights {
-    scroll-margin-top: 190px;
-  }
+  /* Anchor offset for sticky header — handled by JS */
 
   /* ── Container ── */
   .container { max-width: 1200px; margin: 0 auto; padding: 28px 24px 48px; }
@@ -588,12 +582,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Smooth scroll for nav links
+  // Precise smooth scroll for nav links
   document.querySelectorAll('.header-bar a').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
       const id = a.getAttribute('href');
-      if (id) document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
     });
   });
 
