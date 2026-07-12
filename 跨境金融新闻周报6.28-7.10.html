@@ -292,12 +292,12 @@
       <div class="date-badge">2026年6月28日 – 7月10日</div>
     </div>
     <div class="header-stats">
-      <div class="header-stat"><div class="num">31</div><div class="lbl">收录新闻</div></div>
+      <div class="header-stat"><div class="num">28</div><div class="lbl">收录新闻</div></div>
       <div class="header-stat"><div class="num">8</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">6</div><div class="lbl">监管动向</div></div>
       <div class="header-stat"><div class="num">6</div><div class="lbl">跨境电商</div></div>
       <div class="header-stat"><div class="num">6</div><div class="lbl">跨境物流</div></div>
-      <div class="header-stat"><div class="num">6</div><div class="lbl">监管动向</div></div>
-      <div class="header-stat"><div class="num">5</div><div class="lbl">税务/其他</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">其他</div></div>
     </div>
   </div>
   <nav class="header-bar">
@@ -305,8 +305,7 @@
     <a href="#payment">💳 跨境支付</a><span class="sep">|</span>
     <a href="#ecommerce">🛒 电商平台</a><span class="sep">|</span>
     <a href="#logistics">🚚 跨境物流</a><span class="sep">|</span>
-    <a href="#regulatory">⚖️ 监管动向</a><span class="sep">|</span>
-    <a href="#tax">💰 税务合规</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
   </nav>
 </header>
 
@@ -595,7 +594,7 @@
 </div><!-- /container -->
 
 <div class="footer">
-  Shopee 跨境金融运营团队 · 2026年6月28日 – 7月10日 · 数据来源：移动支付网（mpaypass.com.cn）· 出海网（chwang.com）· 仅供团队内部参考
+  跨境金融新闻周报 · 仅供团队内部参考
 </div>
 
 <!-- ═══ CHARTS JS ═══ -->
@@ -606,10 +605,10 @@ document.addEventListener('DOMContentLoaded', () => {
   new Chart(document.getElementById('pieChart'), {
     type: 'doughnut',
     data: {
-      labels: ['跨境支付 (8篇)', '跨境电商 (6篇)', '跨境物流 (6篇)', '监管动向 (6篇)', '税务合规 (3篇)', '其他 (2篇)'],
+      labels: ['跨境支付 (8篇)', '监管动向 (6篇)', '跨境电商 (6篇)', '跨境物流 (6篇)', '其他 (2篇)'],
       datasets: [{
-        data: [25.8, 19.4, 19.4, 19.4, 9.7, 6.5],
-        backgroundColor: ['#F4743B', '#3B6CF4', '#22B07D', '#D32F2F', '#F5A623', '#B0B8C1'],
+        data: [28.6, 21.4, 21.4, 21.4, 7.1],
+        backgroundColor: ['#F4743B', '#D32F2F', '#3B6CF4', '#22B07D', '#B0B8C1'],
         borderColor: '#fff',
         borderWidth: 3,
         hoverBorderWidth: 4,
@@ -649,97 +648,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
-<!-- ═══ SECTION: TAX ═══ -->
-<div class="section-title" id="tax"><span>💰 税务合规</span></div>
 
-<div class="news-grid">
-  <div class="news-card">
-    <div class="nc-top"><span class="nc-tag tax">🔴 紧急 — 已开始补扣</span></div>
-    <div class="nc-title" style="padding:0 20px;">美客多墨西哥站 RFC 核查：追补 36% 所得税预扣款</div>
-    <div class="nc-summary">
-      ▸ RFC 与店铺法律实体不匹配将被移除，6 月前按 10.5% 代扣订单回溯按 36% 重算。<br>
-      ▸ 差额 25.5% 从 7 月 1 日起逐笔从店铺余额补扣，已有卖家被扣空甚至负值。<br>
-      ▸ <strong>行动：</strong>立即核对 RFC 归属 → 有换绑入口尽快上传 → 无入口联系客服申请人工重开。
-    </div>
-    <div class="nc-footer"><span>📅 7月3日 · 出海网</span><a href="https://www.chwang.com/news/207285569885" target="_blank">原文链接 →</a></div>
-  </div>
-  <div class="news-card">
-    <div class="nc-top"><span class="nc-tag tax">🔴 紧急 — 7/7 听证</span></div>
-    <div class="nc-title" style="padding:0 20px;">美 10% 临时附加税 7.24 到期 · 对华拟征 12.5%</div>
-    <div class="nc-summary">
-      ▸ USTR 拟对华（含香港）加征 12.5% Section 301 关税，7 月 7 日调查听证会表决。<br>
-      ▸ 中美航线运费已推至两年高位，海外采购商集中提前下单出货。<br>
-      ▸ <strong>建议：</strong>7 月 24 日前安排急单出运并预留清关缓冲期。<br>
-      ▸ 关注制造业产能过剩 301 调查（覆盖 16 个经济体），预计 7 月 24 日前后公布措施。
-    </div>
-    <div class="nc-footer"><span>📅 7月2日 · 出海网</span><a href="https://www.chwang.com/news/207249178047" target="_blank">原文链接 →</a></div>
-  </div>
-  <div class="news-card">
-    <div class="nc-top"><span class="nc-tag tax">🟡 关注</span></div>
-    <div class="nc-title" style="padding:0 20px;">新加坡电子发票新规：GST 注册企业须采纳 InvoiceNow</div>
-    <div class="nc-summary">基于 Peppol 标准，分阶段实施至 2028-2031 年。在新加坡运营或贸易往来的跨境企业需评估系统对接时间与合规成本。</div>
-    <div class="nc-footer"><span>📅 7月2日 · 出海网</span><a href="https://www.chwang.com/news/207260917246" target="_blank">原文链接 →</a></div>
-  </div>
-  <div class="news-card">
-    <div class="nc-top"><span class="nc-tag other">📌 风控参考</span></div>
-    <div class="nc-title" style="padding:0 20px;">马来西亚电商诈骗两年狂卷 29.7 亿令吉 · 案件翻倍</div>
-    <div class="nc-summary">马来西亚电商诈骗损失两年累计约 29.7 亿令吉，案件数量翻倍至超 6 万起。东南亚电商欺诈风险持续攀升，支付机构需加强交易监控与反欺诈能力建设。</div>
-    <div class="nc-footer"><span>📅 7月2日 · 出海网</span><a href="https://www.chwang.com/news/207286022164" target="_blank">原文链接 →</a></div>
-  </div>
-</div>
+</div><!-- /container -->
+
 
 <div class="footer">
-  Shopee 跨境金融运营团队 · 2026年6月28日 – 7月10日 · 数据来源：移动支付网（mpaypass.com.cn）· 出海网（chwang.com）· 仅供团队内部参考
+  跨境金融新闻周报 · 仅供团队内部参考
 </div>
-
-<!-- ═══ CHARTS JS ═══ -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Doughnut Chart
-  new Chart(document.getElementById('pieChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['跨境支付 (8篇)', '跨境电商 (6篇)', '跨境物流 (6篇)', '监管动向 (6篇)', '税务合规 (3篇)', '其他 (2篇)'],
-      datasets: [{
-        data: [25.8, 19.4, 19.4, 19.4, 9.7, 6.5],
-        backgroundColor: ['#F4743B', '#3B6CF4', '#22B07D', '#D32F2F', '#F5A623', '#B0B8C1'],
-        borderColor: '#fff',
-        borderWidth: 3,
-        hoverBorderWidth: 4,
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      plugins: {
-        legend: {
-          position: 'bottom',
-          labels: {
-            color: '#4A4F5A', padding: 16, usePointStyle: true,
-            pointStyleWidth: 8, font: { size: 11 },
-          }
-        },
-        tooltip: {
-          backgroundColor: '#fff', titleColor: '#1A1A1A', bodyColor: '#4A4F5A',
-          borderColor: '#EAECEF', borderWidth: 1,
-          callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + '%' }
-        }
-      }
-    }
-  });
-
-  // Smooth scroll for nav links
-  document.querySelectorAll('.header-bar a').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const id = a.getAttribute('href');
-      if (id) document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-});
-</script>
-
-</body>
-</html>
