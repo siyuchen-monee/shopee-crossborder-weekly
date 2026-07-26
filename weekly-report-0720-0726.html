@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>跨境金融新闻周报 7.20-7.26 | Shopee 跨境金融运营团队</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   :root {
     --orange: #F4743B;
@@ -35,7 +34,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Header ── */
   .header {
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -54,9 +52,6 @@
   .header-brand .logo {
     color: var(--orange); font-size: 22px; font-weight: 800;
     letter-spacing: -0.5px;
-  }
-  .header-brand .logo-sub {
-    color: var(--text-muted); font-size: 12px; font-weight: 400;
   }
   .header h1 {
     font-size: 26px; font-weight: 700; letter-spacing: -0.3px;
@@ -85,36 +80,9 @@
     background: rgba(255,255,255,0.95); padding: 6px 16px; border-radius: 20px;
   }
   .header-bar a:hover, .header-bar a.active { background: #fff; color: var(--orange-dk); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-  .header-bar .sep { display: none; }
 
-  /* Anchor offset for sticky header — handled by JS */
-
-  /* ── Container ── */
   .container { max-width: 1200px; margin: 0 auto; padding: 28px 24px 48px; }
 
-  /* ── Summary ── */
-  .summary-card {
-    background: var(--white); border-radius: 12px; padding: 28px 30px;
-    box-shadow: var(--shadow); margin-bottom: 24px;
-    border-left: 5px solid var(--orange);
-  }
-  .summary-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-  .summary-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
-
-  /* ── Metrics Row ── */
-  .metrics-row {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
-    margin-bottom: 24px;
-  }
-  @media (max-width: 800px) { .metrics-row { grid-template-columns: repeat(3, 1fr); } }
-  .metric {
-    background: var(--white); border-radius: 10px; padding: 18px 20px;
-    box-shadow: var(--shadow); text-align: center;
-  }
-  .metric .m-num { font-size: 30px; font-weight: 700; color: var(--orange); }
-  .metric .m-lbl { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-
-  /* ── Section ── */
   .section-title {
     font-size: 13px; font-weight: 600; color: var(--text-muted);
     text-transform: uppercase; letter-spacing: 1.5px;
@@ -125,22 +93,6 @@
     content: ''; flex: 1; height: 1px; background: var(--border);
   }
 
-  /* ── Chart Row ── */
-  .chart-row {
-    display: grid; grid-template-columns: 1fr 1.2fr;
-    gap: 20px; margin-bottom: 28px;
-  }
-  @media (max-width: 860px) { .chart-row { grid-template-columns: 1fr; } }
-  .chart-card {
-    background: var(--white); border-radius: 12px; padding: 24px;
-    box-shadow: var(--shadow);
-  }
-  .chart-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-  .chart-card .sub { font-size: 12px; color: var(--text-muted); margin-bottom: 16px; }
-  .chart-wrap { position: relative; }
-  .chart-wrap canvas { max-height: 300px; }
-
-  /* ── News Cards ── */
   .news-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 16px; margin-bottom: 20px;
@@ -165,8 +117,6 @@
   .nc-tag.payment { background: #FFF0E8; color: var(--orange); }
   .nc-tag.ecom { background: #EEF3FF; color: var(--blue); }
   .nc-tag.logistics { background: #ECFAF4; color: var(--green); }
-  .nc-tag.tax { background: #FEF7EB; color: var(--amber); }
-  .nc-tag.other { background: #F3F4F6; color: var(--text-muted); }
   .nc-tag.regulatory { background: #FFF0F0; color: #D32F2F; }
 
   .news-card .nc-title {
@@ -185,7 +135,6 @@
   .news-card .nc-footer a { color: var(--orange); text-decoration: none; font-weight: 600; }
   .news-card .nc-footer a:hover { text-decoration: underline; }
 
-  /* ── Highlight cards for payment section ── */
   .highlight-card {
     background: var(--white); border-radius: 12px;
     box-shadow: var(--shadow); margin-bottom: 14px;
@@ -223,47 +172,16 @@
   }
   .highlight-card .hl-body .hl-link a:hover { color: var(--orange); }
 
-  /* ── Insight row ── */
-  .insight-row {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 14px; margin-bottom: 20px;
-  }
-  @media (max-width: 860px) { .insight-row { grid-template-columns: 1fr; } }
-  .insight-item {
-    background: var(--white); border-radius: 10px; padding: 18px 20px;
-    box-shadow: var(--shadow); border-top: 3px solid var(--orange);
-  }
-  .insight-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--orange); }
-  .insight-item p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.7; }
-
-  /* ── Looking ahead ── */
-  .ahead-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 16px; margin-bottom: 24px;
-  }
-  @media (max-width: 860px) { .ahead-grid { grid-template-columns: 1fr; } }
-  .ahead-card {
-    background: var(--white); border-radius: 12px; padding: 22px 24px;
-    box-shadow: var(--shadow);
-  }
-  .ahead-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
-  .ahead-card ul { list-style: none; padding: 0; }
-  .ahead-card li { font-size: 13px; color: var(--text-secondary); padding: 5px 0; border-bottom: 1px solid var(--border); }
-  .ahead-card li:last-child { border-bottom: none; }
-  .ahead-card li::before { content: '▸ '; color: var(--orange); font-weight: 700; }
-
-  /* ── Footer ── */
   .footer {
     text-align: center; padding: 16px; color: var(--text-muted);
     font-size: 11px; max-width: 1200px; margin: 0 auto;
   }
 
-  /* ── Fade in ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .news-card, .highlight-card, .chart-card, .insight-item, .ahead-card {
+  .news-card, .highlight-card {
     animation: fadeUp 0.5s ease both;
   }
 
@@ -272,7 +190,6 @@
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
 <header class="header">
   <div class="header-top">
     <div>
@@ -285,221 +202,233 @@
       <div class="date-badge">2026年7月20日 – 7月26日</div>
     </div>
     <div class="header-stats">
-      <div class="header-stat"><div class="num">5</div><div class="lbl">跨境支付</div></div>
-      <div class="header-stat"><div class="num">2</div><div class="lbl">电商平台</div></div>
-      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境物流</div></div>
-      <div class="header-stat"><div class="num">2</div><div class="lbl">监管动向</div></div>
-      <div class="header-stat"><div class="num">10</div><div class="lbl">总收录</div></div>
+      <div class="header-stat"><div class="num">7</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">4</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">3</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">16</div><div class="lbl">总收录</div></div>
     </div>
   </div>
   <nav class="header-bar">
-    <a href="#insights" class="active">💡 本周启示</a><span class="sep">|</span>
-    <a href="#payment">💳 跨境支付</a><span class="sep">|</span>
-    <a href="#ecommerce">🛒 电商平台</a><span class="sep">|</span>
-    <a href="#logistics">🚚 跨境物流</a><span class="sep">|</span>
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#logistics">🚚 跨境物流</a>
     <a href="#regulatory">⚖️ 监管动向</a>
   </nav>
 </header>
 
 <div class="container">
-<!-- ═══ SECTION: INSIGHTS ═══ -->
+
+<!-- ═══ INSIGHTS ═══ -->
 <div class="section-title" id="insights"><span>💡 本周启示</span></div>
 
-<div class="full-card" style="margin-bottom:28px;">
+<div style="margin-bottom:28px;">
   <div style="display:flex;flex-direction:column;gap:18px;">
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid var(--orange);">
-      <span style="font-size:22px;min-width:30px;font-weight:800;color:var(--orange);">1</span>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:var(--orange);margin-bottom:6px;">AI 支付标准来了：x402 协议获得 40 家巨头共同背书</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">Visa、万事达卡、Stripe、Google、Coinbase 等 40 家企业联手推出 x402 开放支付协议，旨在让 AI 智能体和 API 能像人类刷卡一样完成支付——无需注册账户、无需填写表单、单次 HTTP 请求即可完成链上结算。协议目前月处理超 7500 万笔交易，由 Linux 基金会托管，目标是成为互联网的支付标准层。这标志着支付基础设施首次为"机器原生"设计，对未来的跨境支付路由、PSP 技术选型都有深远影响。</div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">AI支付从标准发布走向商业落地——速度比预期快</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">本周x402协议获得40家巨头背书、Coinbase推出企业级AI智能体USDC支付基础设施、Visa×连连完成首笔真实B2B智能体交易，三条消息在同一周内出现并非偶然。AI支付正从"协议定义"阶段快速进入"商业可用"阶段。对Seller Financial Service团队而言，这意味着未来1-2年内就可能看到AI智能体开始参与跨境收付款路由、供应商采购支付等实际场景。Visa×连连的合作尤其值得关注——连连是合作PSP，其LoopXPay产品路线图可能影响Shopee卖家的支付体验。</div>
       </div>
     </div>
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid var(--orange);">
-      <span style="font-size:22px;min-width:30px;font-weight:800;color:var(--orange);">2</span>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">2</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:var(--orange);margin-bottom:6px;">渣打银行推出机构级稳定币服务，银行正式站到稳定币入口</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">渣打联合 Circle 推出 USDC 一站式接入服务，成为全球首家提供该服务的 G-SIB 银行。机构客户通过渣打账户即可直接铸造和赎回 USDC，无需在 Circle 单独开户。加上 BNY Mellon 同期扩展 USDC 托管服务、Visa 推出企业级稳定币平台 VSP——银行从"要不要用稳定币"已进入"怎么用稳定币"的阶段。Circle 的机构策略清晰：让渡入口换规模，借银行合规网络加速 USDC 的 B2B 跨境结算场景落地。</div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">稳定币跨境支付从机构端走向消费端——全链条都在动</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">本周渣打银行（机构入口）→菲律宾BPI（银行汇款）→韩国信用卡行业PoC（卡网络）→三星钱包原生支持（消费者端），稳定币正在支付链路的每一个环节同时推进。特别是菲律宾BPI直接介入稳定币汇款（菲律宾是Shopee核心市场），以及韩国8家信用卡公司联合完成稳定币支付PoC，说明亚太地区的银行和卡网络不再观望，而是主动布局。Circle的策略日渐清晰：让渡入口换取规模，借助银行的合规网络和客户基础加速USDC在B2B跨境结算中的渗透。</div>
       </div>
     </div>
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF0F0;border-radius:10px;border-left:4px solid #D32F2F;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">3</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">PingPong 在欧洲被罚，PSP 合规监控不能放松</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">卢森堡金融监管委员会（CSSF）7 月 8 日对 PingPong（Europe S.A.）处以 1.2 万欧元罚款，涉及反洗钱与反恐融资合规缺陷。虽然罚款金额不大，但 PingPong 是重要合作 PSP，此次被欧洲监管点名意味着其合规体系存在可被监管识别的漏洞。此前几周连连支付被外管局+央行双罚、Sunrate 持牌主体寻汇支付被罚没 1342 万——PSP 合规问题不是个例，而是系统性压力。建议将合作 PSP 的海外监管动态（不仅是国内央行罚单，也包括 FCA/CSSF/MAS 等）纳入常态化监控范围。</div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">PSP合规风险从"国内罚单"扩展到"全球穿透"——监控范围必须扩大</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">PingPong被卢森堡CSSF处罚（欧洲）、摩宝支付罚没近3000万+牌照到期（国内）、Zeepay被吊销牌照（非洲）、日本老牌支付服务商破产——PSP的合规风险已经全球化。央行本周发布的《储值账户运营Ⅱ类业务管理办法》征求意见稿进一步表明国内监管也在细化。建议将合作PSP的海外监管动态（CSSF、FCA、MAS、AUSTRAC等）纳入常态化监控范围，不仅关注央行罚单，也要关注PSP在持牌地的合规状态变化。一个PSP在欧洲被罚可能不会立刻影响其亚洲业务，但如果处罚模式扩散，后果会严重得多。</div>
       </div>
     </div>
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF0F0;border-radius:10px;border-left:4px solid #D32F2F;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">4</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">速卖通被欧盟罚 5.5 亿欧元，中国商务部强硬回应</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">欧盟依据《数字服务法》（DSA）对阿里巴巴旗下速卖通开出 5.5 亿欧元罚单，为 DSA 实施以来最高金额。中国商务部当日回应"强烈不满和严正关切"，敦促欧方停止"滥用法律条文模糊性"。这一案件标志着欧盟对大型跨境电商平台的监管从"警告"进入"重罚"阶段，Temu、Shein 等在欧运营的中国平台同样面临 DSA 合规压力。对支付和金融服务而言，平台被重罚可能导致其调整欧洲市场的运营策略（如收紧商户入驻、调整费率结构），间接影响收款和结算业务。</div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">欧盟对跨境电商平台的监管从"警告"进入"重罚+关税+合规"三线并进</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">速卖通被DSA罚5.5亿€（史上最高）、Temu此前被罚2亿€、SHEIN被调查——加上7月1日起小额包裹免税取消（每件3€固定关税+11月再加2€手续费）、8月12日PPWR包装法强制生效——欧盟正在用"监管罚款+关税壁垒+技术合规"三条线同时施压中国跨境电商平台。平台应对策略（本地仓、品牌化、合规升级）会直接改变卖家的运营成本和资金链路。Shopee在欧洲虽无直接业务，但TikTok Shop、Temu等平台的策略调整（强制本地仓、保证金升级）可能为Shopee在其他市场的规则演化提供参照。</div>
       </div>
     </div>
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#EEF3FF;border-radius:10px;border-left:4px solid var(--blue);">
-      <span style="font-size:22px;min-width:30px;font-weight:800;color:var(--blue);">5</span>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">5</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:var(--blue);margin-bottom:6px;">泰国严打"洗产地"——原产地合规正在成为新的贸易壁垒</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">泰国海关在林查班港查获中国进口商品伪装"泰国制造"的大案，涉案金额超 1 亿泰铢。泰国正持续收紧原产地合规监管，严厉打击借道泰国"洗产地"以规避第三国关税的行为。这与上周美司法部新设贸易执法部门（进口欺诈升格刑事追责）形成呼应——原产地申报正在全球范围内从"行政合规事项"变为"高风险的执法重点"。跨境卖家的原产地合规管理和关税筹划需要重新评估风险敞口。</div>
+        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">物流风险双面夹击：地缘政治（红海）+ 商业信用（货代暴雷）——卖家资金安全需要系统性保障</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">美伽跨境暴雷（91条货柜被扣、100名货主受损）和胡塞禁运升级（叠加劳合社战争险新规）代表了两种不同性质的供应链风险：一个是商业信用崩塌，一个是地缘政治恶化。对Shopee卖家的金融服务而言，这意味着：①货代筛选不能只看价格，资金监管和信用背书将成为差异化服务；②货运保险和供应链保障产品的需求正在上升；③卖家资金链的脆弱性暴露——一旦货柜被扣或运费暴涨，中小卖家的现金流很容易断裂。这为平台金融服务（提前收款、供应链融资、货运保险）提供了明确的需求信号。</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ SECTION: PAYMENT ═══ -->
+<!-- ═══ PAYMENT ═══ -->
 <div class="section-title" id="payment"><span>💳 跨境支付</span></div>
 
-<div class="highlight-card">
-  <div class="hl-num">1</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
   <div class="hl-body">
     <div class="hl-title">40家巨头联手！Visa、万事达卡、Stripe等定义AI支付标准x402</div>
     <div class="hl-meta">7月20日</div>
-    <div class="hl-summary">移动支付网</div>
-    Linux基金会宣布x402基金会正式运营，40家机构（含Visa、万事达卡、Stripe、Google、AWS、Coinbase、Solana等）共同推动一个开源AI支付协议。x402复活了HTTP 402状态码，让AI智能体和API能通过单次HTTP请求完成稳定币支付——无需注册账户、无需填写表单。目前月处理超7540万笔交易，Solana占交易量65%。目标是成为"价值互联网的HTTP"。
-    <span class="hl-link"><a href="<span class="hl-point">40家巨头</span><span class="hl-point">AI原生的支付协议</span><span class="hl-point">月7500万笔</span><span class="hl-point">Linux基金会托管</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-summary">移动支付网</div>Linux基金会宣布x402基金会正式运营，40家机构（含Visa、万事达卡、Stripe、Google、AWS、Coinbase、Solana等）共同推动一个开源AI支付协议。x402复活了HTTP 402状态码，让AI智能体和API能通过单次HTTP请求完成稳定币支付——无需注册账户、无需填写表单。目前月处理超7540万笔交易，Solana占交易量65%。目标是成为"价值互联网的HTTP"。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">40家巨头</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">AI原生的支付协议</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">月7500万笔</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Linux基金会托管</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/20172328.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
-
-<div class="highlight-card">
-  <div class="hl-num">2</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
   <div class="hl-body">
     <div class="hl-title">渣打银行联合Circle推出机构级USDC一站式服务：稳定币迎来"银行时刻"</div>
     <div class="hl-meta">7月20日</div>
-    <div class="hl-summary">移动支付网</div>
-    渣打银行成为全球首家提供USDC一站式接入服务的G-SIB银行，机构客户通过渣打账户可直接铸造和赎回USDC，率先在迪拜DIFC落地。同期BNY Mellon扩展USDC托管服务，Visa推出企业级稳定币平台VSP。Circle的策略明确：让渡机构入口换取银行客户基础和信用背书，加速USDC在B2B跨境结算场景的渗透。
-    <span class="hl-link"><a href="<span class="hl-point">渣打×Circle</span><span class="hl-point">G-SIB首家</span><span class="hl-point">USDC银行级服务</span><span class="hl-point">迪拜DIFC落地</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-summary">移动支付网</div>渣打银行成为全球首家提供USDC一站式接入服务的G-SIB银行，机构客户通过渣打账户可直接铸造和赎回USDC，率先在迪拜DIFC落地。同期BNY Mellon扩展USDC托管服务，Visa推出企业级稳定币平台VSP。Circle的策略明确：让渡机构入口换取银行客户基础和信用背书，加速USDC在B2B跨境结算场景的渗透。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">渣打×Circle</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">G-SIB首家</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">USDC银行级服务</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">迪拜DIFC落地</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/20092333.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
-
-<div class="highlight-card">
-  <div class="hl-num">3</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">3</div>
   <div class="hl-body">
     <div class="hl-title">PingPong（Europe S.A.）因反洗钱缺陷被卢森堡监管罚款</div>
-    <div class="hl-meta">当周</div>
-    <div class="hl-summary">移动支付网（本周汇总）</div>
-    卢森堡金融监管委员会（CSSF）7月8日对PingPong（Europe S.A.）处以12000欧元罚款，涉及反洗钱与反恐融资领域的合规缺陷。虽然罚款金额不大，但这是PingPong首次被欧洲监管公开处罚。此前几周连连支付在国内被外管局+央行双罚、Sunrate持牌主体寻汇支付被罚没1342万，PSP合规问题正在全球范围内被穿透式监管。
-    <span class="hl-link"><a href="<span class="hl-point">PingPong</span><span class="hl-point">欧洲处罚</span><span class="hl-point">反洗钱缺陷</span><span class="hl-point">CSSF</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-meta">7月20日</div>
+    <div class="hl-summary">移动支付网（本周行业汇总）</div>卢森堡金融监管委员会（CSSF）7月8日对PingPong（Europe S.A.）处以12,000欧元罚款，涉及反洗钱与反恐融资领域的合规缺陷。虽然罚款金额不大，但这是PingPong首次被欧洲监管公开处罚。此前几周连连支付在国内被外管局+央行双罚、Sunrate持牌主体寻汇支付被罚没1342万——PSP合规问题正在全球范围内被穿透式监管。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">PingPong</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">欧洲处罚</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">反洗钱缺陷</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">CSSF</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/20091651.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
-
-<div class="highlight-card">
-  <div class="hl-num">4</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">4</div>
   <div class="hl-body">
     <div class="hl-title">韩国BC卡与金融结算院共建国家级跨境QR支付服务体系</div>
     <div class="hl-meta">7月20日</div>
-    <div class="hl-summary">移动支付网</div>
-    韩国BC卡与韩国金融结算院签署合作备忘录，共建国家级跨境QR支付网络，系统化打通多国扫码支付通道。境外游客无需新下载APP即可使用本国钱包在韩国超30万家商户扫码支付。近两年访韩日本、中国台湾游客扫码支付笔数增长7.3倍、金额增长9倍，跨境QR需求高速增长。
-    <span class="hl-link"><a href="<span class="hl-point">韩国国家QR网络</span><span class="hl-point">30万商户</span><span class="hl-point">多国互通</span><span class="hl-point">游客支付+730%</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-summary">移动支付网</div>韩国BC卡与韩国金融结算院签署合作备忘录，共建国家级跨境QR支付网络，系统化打通多国扫码支付通道。境外游客无需新下载APP即可使用本国钱包在韩国超30万家商户扫码支付。近两年访韩日本、中国台湾游客扫码支付笔数增长7.3倍、金额增长9倍，跨境QR需求高速增长。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">韩国国家QR网络</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">30万商户</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">多国互通</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">游客支付+730%</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/20093613.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
-
-<div class="highlight-card">
-  <div class="hl-num">5</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">5</div>
   <div class="hl-body">
-    <div class="hl-title">拉卡拉聚焦出海企业资金管理痛点，打造全链条跨境支付服务</div>
+    <div class="hl-title">菲律宾群岛银行（BPI）押注稳定币，加快跨境汇款速度</div>
+    <div class="hl-meta">7月24日</div>
+    <div class="hl-summary">移动支付网</div>菲律宾群岛银行（BPI）与数字清算机构Meridian合作，试点基于稳定币的跨境汇款结算系统，初期聚焦自由职业者、线上虚拟助理等非正式从业者的薪资结算，后续计划在东盟峰会前扩大范围。菲律宾每年跨境汇款规模达数十亿比索，BPI将在菲律宾央行监管框架内开展试点。菲律宾是Shopee核心市场之一，本地银行体系主动拥抱稳定币结算，对区域支付基础设施格局有直接影响。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">菲律宾BPI</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币汇款</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Shopee核心市场</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">央行监管框架</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/24142115.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">6</div>
+  <div class="hl-body">
+    <div class="hl-title">Visa×连连完成首笔LoopXPay真实B2B智能体交易：AI支付从概念走向落地</div>
+    <div class="hl-meta">7月24日</div>
+    <div class="hl-summary">移动支付网</div>Visa与连连数字科技联合宣布完成首笔由AI智能体LoopXPay执行的真实B2B交易——小型企业卖家在单一工作流内完成从供应商寻源到采购和支付的全流程。LoopXPay已注册进入Visa可信智能体名录，可在预设支出控制和审批参数范围内自主决策。连连是重要合作PSP，此次落地标志着AI智能体支付从"标准发布"迈向"商业可用"。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Visa×连连</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">AI智能体B2B</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">LoopXPay</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">从标准到落地</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/24110117.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">7</div>
+  <div class="hl-body">
+    <div class="hl-title">蚂蚁国际完成约12亿美元A轮融资：加速跨境支付和智能商务全球扩张</div>
     <div class="hl-meta">7月20日</div>
-    <div class="hl-summary">移动支付网</div>
-    拉卡拉推出覆盖跨境收款、全球付款、进口收单、跨境薪酬汇款的一体化跨境支付服务体系，支持7×24小时提现和公私账灵活结汇，覆盖海外采购、物流仓储、境外广告投放等支出场景。跨境支付竞争重点正从"渠道覆盖"转向"综合资金管理能力"。
-    <span class="hl-link"><a href="<span class="hl-point">拉卡拉</span><span class="hl-point">全链条跨境支付</span><span class="hl-point">7×24提现</span><span class="hl-point">综合资金管理</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-summary">蚂蚁国际（Business Wire）</div>蚂蚁国际（Ant International）宣布完成约12亿美元A轮融资，由蚂蚁集团、阿里巴巴集团及其他国际机构参投。资金将用于加速旗下Alipay+、Antom（蚂蚁国际收单）和WorldFirst（万里汇）的全球扩张。蚂蚁国际连接全球超1.5亿商户和超20亿用户账户，覆盖亚洲、欧洲、中东和拉美。WorldFirst是Shopee合作的跨境收款PSP之一，蚂蚁国际此次巨额融资将直接增强WorldFirst在产品研发、费率和区域覆盖上的投入能力。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">蚂蚁国际</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">12亿美元A轮</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">WorldFirst母公司</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">150M商户+2B用户</span>
+    <span class="hl-link"><a href="https://www.businesswirenews.com/news/home/20260720424592/en/" target="_blank">原文链接 →</a></span>
   </div>
 </div>
 
-<!-- ═══ SECTION: ECOMMERCE ═══ -->
+<!-- ═══ ECOMMERCE ═══ -->
 <div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
 
 <div class="news-grid">
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag ecom">🔴 监管重罚</span></div>
     <div class="nc-title" style="padding:0 20px;">欧盟对速卖通开出DSA最高罚单5.5亿欧元，中国商务部强硬回应</div>
-    <div class="nc-summary">欧盟委员会7月20日依据《数字服务法》（DSA）对阿里巴巴旗下全球速卖通处以5.5亿欧元罚款，为DSA全面实施以来对大型在线平台的最高罚单。中国商务部当日回应"强烈不满和严正关切"，敦促欧方停止"滥用法律条文模糊性"，并支持企业维权。此举标志欧盟对大型跨境电商平台的监管从警告进入重罚阶段。</div>
-    <div class="nc-footer"><span>7月20日</span><a href="出海网" target="_blank">原文链接 →</a></div>
+    <div class="nc-summary">欧盟委员会7月20日依据《数字服务法》（DSA）对阿里巴巴旗下全球速卖通处以5.5亿欧元罚款，为DSA全面实施以来对大型在线平台的最高罚单，涉及风险评估失准、审核人员不足、违规商品持续销售等"系统性治理失灵"。中国商务部7月22日回应"强烈不满和严正关切"，敦促欧方停止设置数字壁垒。此前Temu已被罚2亿欧元、SHEIN被调查——中国跨境电商平台在欧洲面临合规成本、罚款与关税三条线同时收紧。</div>
+    <div class="nc-footer"><span>7月20-22日</span><a href="https://www.chwang.com/news/207985567738" target="_blank">原文链接 →</a></div>
   </div>
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag ecom">⚠️ 合规执法</span></div>
-    <div class="nc-title" style="padding:0 20px;">泰国海关林查班港查获亿元"洗产地"大案：中国商品冒充泰国制造</div>
-    <div class="nc-summary">泰国海关在林查班港免税区查获两起伪造原产地案件：537万支中国产香烟包装印"Made in Thailand"（损失约1700万泰铢），20.2万套美工刀以"半成品"名义进口后伪标泰国制造（案值8427万泰铢）。泰国正持续收紧原产地合规监管，严厉打击借道"洗产地"规避第三国关税的行为。</div>
-    <div class="nc-footer"><span>7月20日</span><a href="出海网" target="_blank">原文链接 →</a></div>
+    <div class="nc-title" style="padding:0 20px;">泰国海关林查班港连破两起亿元"洗产地"大案：中国商品冒充泰国制造</div>
+    <div class="nc-summary">泰国海关7月20日在林查班港查获两起特大原产地伪造案：537万支中国产香烟印"Made in Thailand"标签（涉案约1700万泰铢），20.2万套中国刀片在自贸区内简单组装并伪标泰国产（涉案8427万泰铢）。过去10个月同类案件累计177起、总金额13.78亿泰铢。泰国海关将收紧自贸区内本地成分核算标准，大幅提高伪造原产地罚款力度——原产地合规正在成为跨境卖家的硬性生存要求。</div>
+    <div class="nc-footer"><span>7月20-24日</span><a href="https://www.chwang.com/news/208047081149" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">🌐 贸易政策</span></div>
+    <div class="nc-title" style="padding:0 20px;">美国301关税落地对中国征12.5%，中美同时探讨互降各300亿美元关税框架</div>
+    <div class="nc-summary">美国7月24日起对中国内地及香港适用12.5%的301条款附加关税（原10%全球临时附加税到期）。同日中国商务部确认中美正推进各300亿美元的对等降税框架谈判，具体HS清单待9月前确定。这一边加税一边谈判的双轨格局意味着短期内关税成本仍然高企，但中期存在局部降温空间——卖家的关税筹划需要同时准备两个方向。</div>
+    <div class="nc-footer"><span>7月24日</span><a href="https://www.chwang.com/news/208047817069" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">📋 平台治理</span></div>
+    <div class="nc-title" style="padding:0 20px;">7月跨境圈迎来"规则大月"：TikTok Shop保证金三级制+Temu合规升级+Shopee印尼算法整改</div>
+    <div class="nc-summary">TikTok Shop美区7月8日起保证金升级为三级架构（基础1500$+类目保证金+风险保证金500-10000$浮动），欧洲强制本地仓发货；Temu加入意大利国家反假冒计划VER.O并升级企业状态验证；Shopee印尼因KPPU介入算法整改一年释放8250万美元卖家效益。平台治理从"流量优先"转向"合规与质量优先"的趋势已不可逆。</div>
+    <div class="nc-footer"><span>7月全月</span><a href="https://www.chwang.com/news/208058453544" target="_blank">原文链接 →</a></div>
   </div>
 </div>
 
-<!-- ═══ SECTION: LOGISTICS ═══ -->
+<!-- ═══ LOGISTICS ═══ -->
 <div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
 
 <div class="news-grid">
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag logistics">🌪 航运风险</span></div>
-    <div class="nc-title" style="padding:0 20px;">胡塞武装升级禁运：禁止挂靠沙特港口的船舶通行红海</div>
-    <div class="nc-summary">胡塞武装7月20日向多家航运公司发邮，明确禁运范围覆盖挂沙特旗及在沙特港口装卸的船舶。这是继此前曼德海峡封锁威胁后，红海航运安全的进一步恶化。绕行好望角的额外成本可能持续推高全球运费，货运保险和供应链保障需求继续上升。</div>
-    <div class="nc-footer"><span>7月20日</span><a href="出海网" target="_blank">原文链接 →</a></div>
+    <div class="nc-title" style="padding:0 20px;">红海航运风险再升级：胡塞武装禁运挂沙特港船舶，劳合社发霍尔木兹通行费新规</div>
+    <div class="nc-summary">胡塞武装7月20日向多家航运公司发邮，明确禁运覆盖挂沙特旗及在沙特港口装卸的船舶。紧接着7月23日，伦敦劳合社市场协会（LMA）发布新规：船东若为通过霍尔木兹海峡而支付通行费，其战争险保单自动终止。两条消息叠加意味着红海-中东航线的风险成本进一步攀升，绕行好望角可能成为长期选项，全球海运费用和货运保险成本将持续承压。</div>
+    <div class="nc-footer"><span>7月20-23日</span><a href="https://www.chwang.com/news/208047982641" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">🚨 货代暴雷</span></div>
+    <div class="nc-title" style="padding:0 20px;">美伽跨境供应链资金链断裂暴雷：拖欠1200万元，91条货柜被扣，卖家面临天价赎货</div>
+    <div class="nc-summary">主营中美海运FBA头程的货代企业美伽跨境供应链（深圳）有限公司7月16日宣布"资不抵债"，累计拖欠约1200万元，波及91个在途货柜和约100名货主，货物价值超2000万元。美国合作海外仓要求按40元/公斤标准赎货，一个10吨货柜赎货成本高达40万元——部分卖家赎货开销超过货物本身价值。此事件暴露了中小货代低价竞争、轻资产运营和跨境物流链路权责割裂的结构性风险。</div>
+    <div class="nc-footer"><span>7月16-22日</span><a href="https://imgs-b2b.100ec.cn/detail--6661735.html" target="_blank">原文链接 →</a></div>
   </div>
 </div>
 
-<!-- ═══ SECTION: REGULATORY ═══ -->
+<!-- ═══ REGULATORY ═══ -->
 <div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
 
 <div class="highlight-card" style="border-left-color:#D32F2F;">
   <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
   <div class="hl-body">
-    <div class="hl-title">国务院批复《扩大消费"十五五"规划》：优化入境消费支付环境</div>
+    <div class="hl-title">国务院批复扩大消费规划：优化入境消费支付环境 + 外汇局推跨境投融资便利化一揽子政策</div>
     <div class="hl-meta">当周</div>
-    <div class="hl-summary">国务院</div>
-    国务院批复的扩大消费规划明确提出"优化入境消费支付环境"，推动入境游客在通关、住宿、交通、电信、景点预约等方面便利化。这为跨境支付和入境消费场景提供了政策支持。同期微信支付发布扫码盒子数字化经营方案升级，优化外卡受理能力。
-    <span class="hl-link"><a href="<span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">入境消费支付</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">十五五规划</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">国务院批复</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-summary">国务院 / 国家外汇管理局</div>国务院批复的扩大消费"十五五"规划明确提出"优化入境消费支付环境"，推动入境游客在通关、住宿、交通、电信等方面便利化。同期外汇局宣布拟再推一揽子跨境投融资便利化政策：简化资本项目结汇支付手续、扩大跨境融资高水平开放试点范围、将部分登记业务改由银行直接办理。截至6月末，参与外汇展业改革的银行已增至33家，上半年为5.3万户优质企业便利化办理业务超5800亿美元，同比翻番。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">入境消费支付</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">跨境投融资便利化</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">33家银行参与</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">5800亿美元</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/20091651.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
-
 <div class="highlight-card" style="border-left-color:#D32F2F;">
   <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
   <div class="hl-body">
-    <div class="hl-title">央行否决酷宝支付注册资本变更：支付机构股东资质审查趋严</div>
+    <div class="hl-title">央行否决酷宝支付注册资本变更：股东资质审查趋严 + 行业淘汰正在加速</div>
     <div class="hl-meta">当周</div>
-    <div class="hl-summary">中国人民银行</div>
-    中国人民银行北京市分行否决了酷宝支付的注册资本变更申请，理由为"主要股东应当财务状况和诚信记录良好"，注册资本须以自有资金实缴。同期刊登的本周行业汇总还提到摩宝支付因罚没近3000万且牌照下月到期、非洲Zeepay被吊销牌照、日本老牌支付服务商破产——PSP行业的合规淘汰正在全球范围内加速。
-    <span class="hl-link"><a href="<span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">变更被否</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">股东资质审查</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">行业淘汰加速</span>" target="_blank">原文链接 →</a></span>
+    <div class="hl-summary">中国人民银行</div>中国人民银行北京市分行否决了酷宝支付的注册资本变更申请，理由为"主要股东应当财务状况和诚信记录良好"，注册资本须以自有资金实缴。同期刊登的行业汇总显示：摩宝支付因罚没近3000万且牌照下月到期、非洲Zeepay被吊销牌照、日本老牌支付服务商破产——PSP行业的合规淘汰正在全球范围内加速，支付机构的股东背景和资本实力成为监管审查重点。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">变更被否</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">股东资质审查</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">行业淘汰加速</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">全球性趋势</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/20091651.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">3</div>
+  <div class="hl-body">
+    <div class="hl-title">央行发布《储值账户运营Ⅱ类业务管理办法》征求意见稿：支付监管框架进一步完善</div>
+    <div class="hl-meta">7月24日</div>
+    <div class="hl-summary">中国人民银行</div>中国人民银行发布《储值账户运营Ⅱ类业务管理办法（征求意见稿）》，对储值账户运营Ⅱ类业务的设立条件、运营规则、客户备付金管理、风险控制等作出系统性规定。这是在《非银行支付机构监督管理条例》框架下对具体业务类型的细化配套制度，标志着支付行业"1+N"监管体系持续落地。对合作PSP而言，储值账户相关业务的合规门槛将进一步提高，建议关注正式稿发布后的过渡期安排。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">储值账户运营</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">Ⅱ类业务管理办法</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">支付1+N监管体系</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">合规门槛提高</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/24184122.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
 
-
 </div><!-- /container -->
 
+<div class="footer">
+  跨境金融新闻周报 · 仅供团队内部参考
+</div>
 
-<!-- ═══ CHARTS JS ═══ -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-
-  // Doughnut Chart
-  new Chart(document.getElementById('pieChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['跨境支付 (4篇)', '监管动向 (6篇)', '电商平台 (4篇)', '跨境物流 (4篇)'],
-      datasets: [{
-        data: [22.2, 33.3, 22.2, 22.2],
-        backgroundColor: ['#F4743B', '#D32F2F', '#3B6CF4', '#22B07D'],
-        borderColor: '#fff',
-        borderWidth: 3,
-        hoverBorderWidth: 4,
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      plugins: {
-        legend: {
-          position: 'bottom',
-          labels: {
-            color: '#4A4F5A', padding: 16, usePointStyle: true,
-            pointStyleWidth: 8, font: { size: 11 },
-          }
-        },
-        tooltip: {
-          backgroundColor: '#fff', titleColor: '#1A1A1A', bodyColor: '#4A4F5A',
-          borderColor: '#EAECEF', borderWidth: 1,
-          callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + '%' }
-        }
-      }
-    }
-  });
-
-  // Precise smooth scroll for nav links
   document.querySelectorAll('.header-bar a').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
@@ -512,28 +441,8 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: top, behavior: 'smooth' });
     });
   });
-
 });
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-<div class="footer">
-  跨境金融新闻周报 · 仅供团队内部参考
-</div>
-
 </body>
 </html>
-
-</div><!-- /container -->
-
-
