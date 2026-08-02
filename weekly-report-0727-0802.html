@@ -6,165 +6,60 @@
 <title>跨境金融新闻周报 7.27-8.2 | Shopee 跨境金融运营团队</title>
 <style>
   :root {
-    --orange: #F4743B;
-    --orange-dk: #E05A26;
-    --orange-lt: #FFF0E8;
-    --orange-bg: #FFF7F2;
-    --white: #FFFFFF;
-    --text: #1A1A1A;
-    --text-secondary: #4A4F5A;
-    --text-muted: #9499A3;
-    --border: #EAECEF;
-    --card-bg: #F8F9FB;
-    --navy: #2D343E;
-    --blue: #3B6CF4;
-    --green: #22B07D;
-    --amber: #F5A623;
-    --red: #E84A5F;
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
     --shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
+  * { margin:0; padding:0; box-sizing:border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
-    background: #F5F6F8;
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
   }
-
-  .header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 28px 0 0;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .header-top {
-    max-width: 1200px; margin: 0 auto; padding: 0 32px 20px;
-    display: flex; justify-content: space-between; align-items: flex-start;
-    flex-wrap: wrap; gap: 16px;
-  }
-  .header-brand { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
-  .header-brand .logo {
-    color: var(--orange); font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
-  }
-  .header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; }
-  .header .meta { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
-  .header .date-badge {
-    display: inline-block; margin-top: 8px;
-    background: var(--orange-bg); color: var(--orange-dk);
-    font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 20px;
-  }
-  .header-stats { display: flex; gap: 20px; flex-wrap: wrap; }
-  .header-stat { text-align: center; min-width: 50px; }
-  .header-stat .num { font-size: 22px; font-weight: 700; color: var(--orange); }
-  .header-stat .lbl { font-size: 10px; color: var(--text-muted); }
-
-  .header-bar {
-    background: var(--orange);
-    padding: 10px 32px; display: flex; justify-content: center; align-items: center; gap: 8px;
-    max-width: 100%; overflow-x: auto; flex-wrap: wrap;
-  }
-  .header-bar a {
-    display: inline-block; color: var(--orange); text-decoration: none; font-size: 12px;
-    font-weight: 600; white-space: nowrap; transition: all 0.2s;
-    background: rgba(255,255,255,0.95); padding: 6px 16px; border-radius: 20px;
-  }
-  .header-bar a:hover, .header-bar a.active { background: #fff; color: var(--orange-dk); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-
-  .container { max-width: 1200px; margin: 0 auto; padding: 28px 24px 48px; }
-
-  .section-title {
-    font-size: 13px; font-weight: 600; color: var(--text-muted);
-    text-transform: uppercase; letter-spacing: 1.5px;
-    margin: 28px 0 12px;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .news-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 16px; margin-bottom: 20px;
-  }
-  @media (max-width: 860px) { .news-grid { grid-template-columns: 1fr; } }
-
-  .news-card {
-    background: var(--white); border-radius: 10px; padding: 0;
-    box-shadow: var(--shadow); overflow: hidden;
-    transition: box-shadow 0.2s;
-    display: flex; flex-direction: column;
-  }
-  .news-card:hover { box-shadow: 0 2px 12px rgba(244,116,59,0.1); }
-  .news-card .nc-top { padding: 18px 20px 0; flex-shrink: 0; }
-  .news-card .nc-tag {
-    display: inline-block; font-size: 10px; font-weight: 700;
-    padding: 3px 8px; border-radius: 3px; margin-bottom: 8px;
-  }
-  .nc-tag.ecom { background: #EEF3FF; color: var(--blue); }
-  .nc-tag.logistics { background: #ECFAF4; color: var(--green); }
-  .news-card .nc-title {
-    font-size: 14px; font-weight: 700; color: var(--text);
-    line-height: 1.5; margin-bottom: 8px;
-  }
-  .news-card .nc-summary {
-    font-size: 12.5px; color: var(--text-secondary); line-height: 1.7;
-    padding: 0 20px 16px; flex: 1;
-  }
-  .news-card .nc-footer {
-    padding: 10px 20px; font-size: 11px; color: var(--text-muted);
-    border-top: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .news-card .nc-footer a { color: var(--orange); text-decoration: none; font-weight: 600; }
-  .news-card .nc-footer a:hover { text-decoration: underline; }
-
-  .highlight-card {
-    background: var(--white); border-radius: 12px;
-    box-shadow: var(--shadow); margin-bottom: 14px;
-    overflow: hidden; display: flex;
-    border-left: 5px solid var(--orange);
-  }
-  @media (max-width: 600px) { .highlight-card { flex-direction: column; } }
-  .highlight-card .hl-num {
-    display: flex; align-items: center; justify-content: center;
-    min-width: 70px; font-size: 32px; font-weight: 800;
-    color: var(--orange); background: var(--orange-bg);
-  }
-  .highlight-card .hl-body { padding: 18px 20px; flex: 1; }
-  .highlight-card .hl-body .hl-title {
-    font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px;
-  }
-  .highlight-card .hl-body .hl-meta {
-    font-size: 11px; color: var(--text-muted); margin-bottom: 8px;
-  }
-  .highlight-card .hl-body .hl-summary {
-    font-size: 13px; color: var(--text-secondary); line-height: 1.7;
-    margin-bottom: 6px;
-  }
-  .highlight-card .hl-body .hl-point {
-    display: inline-block; background: var(--orange-bg); color: var(--orange-dk);
-    font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px;
-    margin: 3px 4px 0 0;
-  }
-  .highlight-card .hl-body .hl-link {
-    display: block; text-align: right; font-size: 10px; margin-top: 8px;
-  }
-  .highlight-card .hl-body .hl-link a {
-    color: var(--text-muted); text-decoration: none; transition: color 0.2s;
-  }
-  .highlight-card .hl-body .hl-link a:hover { color: var(--orange); }
-
-  .footer {
-    text-align: center; padding: 16px; color: var(--text-muted);
-    font-size: 11px; max-width: 1200px; margin: 0 auto;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .news-card, .highlight-card { animation: fadeUp 0.5s ease both; }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:28px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1200px; margin:0 auto; padding:0 32px 20px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1200px; margin:0 auto; padding:28px 24px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 12px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .nc-tag.logistics { background:#ECFAF4; color:var(--green); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:flex; border-left:5px solid var(--orange); }
+  @media (max-width:600px) { .highlight-card { flex-direction:column; } }
+  .highlight-card .hl-num { display:flex; align-items:center; justify-content:center; min-width:70px; font-size:32px; font-weight:800; color:var(--orange); background:var(--orange-bg); }
+  .highlight-card .hl-body { padding:18px 20px; flex:1; }
+  .highlight-card .hl-body .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
+  .highlight-card .hl-body .hl-meta { font-size:11px; color:var(--text-muted); margin-bottom:8px; }
+  .highlight-card .hl-body .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:6px; }
+  .highlight-card .hl-body .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-body .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-body .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-body .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1200px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
 </style>
 </head>
 <body>
@@ -180,10 +75,10 @@
     </div>
     <div class="header-stats">
       <div class="header-stat"><div class="num">5</div><div class="lbl">跨境支付</div></div>
-      <div class="header-stat"><div class="num">2</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">3</div><div class="lbl">电商平台</div></div>
       <div class="header-stat"><div class="num">3</div><div class="lbl">跨境物流</div></div>
-      <div class="header-stat"><div class="num">4</div><div class="lbl">监管动向</div></div>
-      <div class="header-stat"><div class="num">14</div><div class="lbl">总收录</div></div>
+      <div class="header-stat"><div class="num">5</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">16</div><div class="lbl">总收录</div></div>
     </div>
   </div>
   <nav class="header-bar">
@@ -197,56 +92,54 @@
 
 <div class="container">
 
-<!-- ═══ INSIGHTS ═══ -->
 <div class="section-title" id="insights"><span>💡 本周启示</span></div>
 <div style="margin-bottom:28px;">
   <div style="display:flex;flex-direction:column;gap:18px;">
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">央行级代币化试验+Circle专利收购+三星进场——稳定币支付基础设施竞赛进入新阶段</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">韩国央行完成6国代币化跨境支付试验（平均80秒结算）、Circle收购IBM近千项区块链专利、三星SDS携手Dunamu布局稳定币基础设施——三条消息分别来自央行、发行商和科技财阀，代表了稳定币支付基础设施竞赛的三个参与方。韩国央行试验验证了"代币化存款"这一技术路径的可行性，Circle的专利收购则表明发行商正在为标准化竞争储备技术壁垒，三星的进场意味着韩国财阀不再满足于观望。三件事叠加指向同一个判断：稳定币支付不再是"是否会发生"的问题，而是"谁的方案会成为基础层"的问题。</div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">央行级代币化试验+Circle专利收购+三星进场——稳定币支付基础设施竞赛的可能走向</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">韩国央行完成6国代币化跨境支付试验（平均80秒结算）、Circle收购IBM近千项区块链专利、三星SDS携手Dunamu布局稳定币基础设施——三条消息分别来自央行、发行商和科技财阀，代表了稳定币支付基础设施竞赛的三个参与方。韩国央行试验验证了"代币化存款"这一技术路径的可行性；Circle的专利收购可能意味着发行商正在为标准竞争储备技术壁垒；三星的进场则表明韩国财阀不再满足于观望。三件事叠加可能指向一个趋势：稳定币支付基础设施的竞争焦点正从"是否可行"转向"谁的标准会胜出"。</div>
       </div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">2</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">人民币跨境支付通道加速拓宽——CIPS非洲80亿+KPay新加坡牌照</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">CIPS非洲交易量突破80亿元、KPay获得新加坡MPI牌照——两条消息指向人民币跨境支付通道在供给端的持续扩张。CIPS代表的是底层清算基础设施的全球化推进，KPay代表的则是区域支付牌照布局的细化。两者共同释放的信号是：跨境支付的可选项正在增多，美元不再是唯一路径。在美元汇率波动加剧和制裁风险上升的背景下，支付通道的多元化对跨境贸易的资金安全具有实际意义。</div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">人民币跨境支付通道持续拓宽——CIPS非洲扩张与新加坡牌照布局的叠加信号</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">CIPS非洲交易量突破80亿元、KPay获得新加坡MPI牌照——两条消息分别对应底层清算基础设施的全球化推进和区域支付牌照布局的细化。一个可能的方向是：人民币跨境支付的可选路径正在增多，美元之外的其他结算通道正在逐步拓宽。在美元汇率波动和制裁风险上升的背景下，支付通道多元化对跨境贸易资金安全的价值值得关注。</div>
       </div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">3</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">美国关税工具"武器化"趋势明显——从301到二级关税到贸易欺诈追缴</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">本周四条监管新闻中三条与美国相关：参议院通过二级关税法案（最高100%惩罚性关税）、贸易欺诈工作组一年追缴超10亿美元、OFAC将6家中国香港航运企业列入SDN清单。加上上周刚落地的对华12.5%的301关税——美国的关税和制裁工具正在从"贸易调节手段"向"地缘政治武器"演变。对跨境卖家而言，关税合规（申报准确性）、制裁合规（交易对手筛查）和原产地合规三个维度的风险正在同时上升，且违规后果从罚款升级为刑事责任。</div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">美国关税和制裁工具的扩张方向——从301到二级关税到贸易欺诈追缴</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">本周多条监管新闻与美国相关：参议院通过二级关税法案（最高100%惩罚性关税）、贸易欺诈工作组一年追缴超10亿美元、OFAC将6家中国香港航运企业列入SDN清单。叠加外汇局8月1日强调加强跨境资金流动监测和AI赋能监管——美国的关税与制裁工具和中国的跨境资金监管正在同步强化。关税合规、制裁合规和原产地合规三个维度的风险可能同时上升，且违规后果正从行政处罚向刑事责任方向延伸。</div>
       </div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">4</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">东南亚平台监管从"欢迎入驻"转向"有条件共存"——马来西亚下架提案是标志性信号</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">马来西亚议员提议临时下架拼多多的提案是东南亚国家首次出现针对中国跨境电商平台的"下架"级别动议。此前印尼已强令Shopee对本土微企服务费减半，越南对Temu和SHEIN加强税务稽查——东南亚正在复制欧盟和美国的监管路径，但节奏更快、形式更直接。对平台和卖家而言，东南亚不再是无条件增量市场，合规能力正在成为市场准入的前置条件。</div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">东南亚平台监管的可能转向——马来西亚下架提案是一个值得关注的信号</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">马来西亚议员提议临时下架拼多多是东南亚国家首次出现针对中国跨境电商平台的"下架"级别动议。此前印尼已调整本土微企服务费率，越南对Temu和SHEIN加强税务稽查——东南亚的监管路径似乎在向欧盟和美国靠拢，但节奏更快、形式更直接。如果这一趋势持续，合规能力可能从"加分因素"变为区域市场准入的前置条件。</div>
       </div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">5</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">物流成本压力三面夹击——运价暴涨+港口拥堵+制裁风险</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">美线运价8月暴涨（美东破万、美西冲9000+）、中国六大集装箱港口因双台风出现严重拥堵、OFAC将6家中国香港航运企业列入SDN清单——物流成本正在从"运费"、"时效"和"合规"三个维度同时承压。顺丰国际落地TikTok Shop欧洲12国3PL直发则代表了另一种方向：头部物流商与平台深度绑定，为卖家提供"物流+金融"的一站式服务。两种力量的拉扯意味着卖家在物流端的决策将更加复杂，对运费融资、货运保险和提前收款等金融工具的需求将持续走强。</div>
+        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">物流成本的多维压力与欧盟合规门槛的叠加效应</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">美线运价8月暴涨（美东破万、美西冲9000+）、中国六大港口因台风出现严重拥堵、OFAC将中国香港航运企业列入SDN清单——物流成本正从运费、时效和合规三个维度同时承压。与此同时，欧盟小额包裹免税取消满月效应显现（低价直邮受冲击、海外仓模式加速替代）以及PPWR包装法规8月12日即将强制生效——物流端的压力与欧盟合规门槛的抬高正在产生叠加效应。顺丰国际落地TikTok Shop欧洲12国3PL直发则代表了另一种方向：头部物流商与平台深度绑定，整合物流与金融的一站式服务可能在竞争中占据优势。</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ PAYMENT ═══ -->
 <div class="section-title" id="payment"><span>💳 跨境支付</span></div>
 <div class="highlight-card" style="border-left-color:#F4743B;">
   <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
   <div class="hl-body">
     <div class="hl-title">韩国央行完成代币化跨境支付试验：平均结算仅80秒，6国央行参与</div>
     <div class="hl-meta">7月31日</div>
-    <div class="hl-summary">移动支付网</div>韩国央行（BOK）宣布完成代币化跨境支付概念验证（PoC），6国央行及多家商业银行参与测试，平均结算时间仅80秒，较传统代理行模式（1-3个工作日）缩短数百倍。试验验证了基于分布式账本的代币化存款在跨境支付中的技术可行性，为下一代跨境支付基础设施提供了关键参照。亚太地区央行在跨境支付基建上的投入正在加速，这一趋势将对区域内的PSP和平台支付链路产生直接影响。
+    <div class="hl-summary">移动支付网</div>韩国央行（BOK）宣布完成代币化跨境支付概念验证（PoC），6国央行及多家商业银行参与测试，平均结算时间仅80秒，较传统代理行模式（1-3个工作日）缩短数百倍。试验验证了基于分布式账本的代币化存款在跨境支付中的技术可行性，亚太地区央行在跨境支付基建上的投入正在加速。
     <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">韩国央行</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">代币化跨境支付</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">6国央行参与</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">80秒结算</span>
     <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/31102745.html" target="_blank">原文链接 →</a></span>
   </div>
@@ -256,7 +149,7 @@
   <div class="hl-body">
     <div class="hl-title">Circle收购IBM近千项区块链专利：稳定币基础设施竞争进入专利壁垒阶段</div>
     <div class="hl-meta">7月28日</div>
-    <div class="hl-summary">移动支付网</div>Circle宣布收购IBM近千项区块链技术专利，涵盖代币化、分布式账本、共识机制等核心领域。这是Circle继渣打银行合作、USDC多链扩展后的又一战略动作——从"稳定币发行商"向"稳定币基础设施平台"转型。专利储备将在稳定币支付网络的标准化竞争中为Circle提供技术护城河，同时也可能改变其与银行、PSP合作时的技术议价能力。
+    <div class="hl-summary">移动支付网</div>Circle宣布收购IBM近千项区块链技术专利，涵盖代币化、分布式账本、共识机制等核心领域。这是Circle继渣打银行合作、USDC多链扩展后的又一战略动作——从"稳定币发行商"向"稳定币基础设施平台"转型。专利储备可能在标准化竞争中为Circle提供技术护城河，也可能改变其与银行、PSP合作时的技术议价格局。
     <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Circle</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">IBM近千项专利</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币基础设施</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">专利壁垒</span>
     <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/28092816.html" target="_blank">原文链接 →</a></span>
   </div>
@@ -266,7 +159,7 @@
   <div class="hl-body">
     <div class="hl-title">人民币跨境支付持续出海：非洲CIPS交易突破80亿元</div>
     <div class="hl-meta">7月30日</div>
-    <div class="hl-summary">移动支付网</div>跨境银行间支付清算公司（CIPS）数据显示，非洲地区人民币跨境支付交易量突破80亿元人民币，覆盖非洲40余国。CIPS正加速在"一带一路"沿线布局，非洲作为新兴市场的人民币结算需求增长迅速。对跨境贸易收款而言，人民币结算通道的拓宽意味着卖家在传统美元结算之外多了一条成本可控的选项，尤其在美元汇率波动和制裁风险上升的背景下。
+    <div class="hl-summary">移动支付网</div>跨境银行间支付清算公司（CIPS）数据显示，非洲地区人民币跨境支付交易量突破80亿元人民币，覆盖非洲40余国。CIPS正加速在"一带一路"沿线布局，非洲作为新兴市场的人民币结算需求增长迅速。人民币结算通道的拓宽为跨境卖家在传统美元结算之外提供了更多选项，在美元汇率波动和制裁风险上升的背景下具有一定价值。
     <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">CIPS</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">非洲80亿元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">人民币跨境支付</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">40余国覆盖</span>
     <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/30172809.html" target="_blank">原文链接 →</a></span>
   </div>
@@ -286,62 +179,67 @@
   <div class="hl-body">
     <div class="hl-title">三星SDS携手Dunamu布局稳定币基础设施：韩国财阀加速进场</div>
     <div class="hl-meta">7月31日</div>
-    <div class="hl-summary">移动支付网</div>三星SDS（三星集团IT服务子公司）与韩国加密交易所Upbit运营商Dunamu签署合作协议，共同开发稳定币支付基础设施。三星SDS将提供区块链平台技术和企业级IT集成能力，Dunamu贡献数字资产运营经验。继韩国8家信用卡公司完成稳定币PoC后，三星的入局标志着韩国稳定币生态从"支付网络测试"向"基础设施规模化"迈进——企业级稳定币支付可能在韩国率先落地。
+    <div class="hl-summary">移动支付网</div>三星SDS（三星集团IT服务子公司）与韩国加密交易所Upbit运营商Dunamu签署合作协议，共同开发稳定币支付基础设施。三星SDS将提供区块链平台技术和企业级IT集成能力，Dunamu贡献数字资产运营经验。继韩国8家信用卡公司完成稳定币PoC后，三星的入局标志着韩国稳定币生态从"支付网络测试"向"基础设施规模化"迈进。
     <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">三星SDS</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Dunamu</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币基础设施</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">韩国财阀进场</span>
     <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/31095157.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
 
-<!-- ═══ ECOMMERCE ═══ -->
 <div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
 <div class="news-grid">
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag ecom">🔴 监管调查</span></div>
     <div class="nc-title" style="padding:0 20px;">SHEIN港交所IPO文件首度披露遭FTC调查，上市进程面临美国监管审视</div>
-    <div class="nc-summary">SHEIN在港交所IPO申请文件中首次披露正遭受美国联邦贸易委员会（FTC）调查，涉及消费者保护、数据隐私及供应链合规等问题。SHEIN目标估值400-500亿美元（较峰值缩水近六成），FTC调查的披露为IPO进程增加了不确定性。此前欧盟已对SHEIN启动DSA合规调查，加上Temu被欧盟罚2亿€、速卖通被罚5.5亿€——中国快时尚跨境电商平台在国际资本市场和监管环境下面临双重审视。</div>
+    <div class="nc-summary">SHEIN在港交所IPO申请文件中首次披露正遭受美国联邦贸易委员会（FTC）调查，涉及消费者保护、数据隐私及供应链合规等问题。SHEIN目标估值400-500亿美元（较峰值缩水近六成），FTC调查的披露为IPO进程增加了不确定性。此前欧盟已对SHEIN启动DSA合规调查，中国快时尚跨境电商平台在国际资本市场和监管环境下面临双重审视。</div>
     <div class="nc-footer"><span>7月31日</span><a href="https://www.chwang.com/news/208303005489" target="_blank">原文链接 →</a></div>
   </div>
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag ecom">⚠️ 平台合规</span></div>
     <div class="nc-title" style="padding:0 20px;">Temu连遭监管压力：土耳其罚款+关停广东国内仓转投欧洲自营仓</div>
-    <div class="nc-summary">Temu本周接连遭遇两个方向的压力：在土耳其因"锁门拒查"被罚款369.6万里拉（约合人民币80万），同时宣布关停广东国内仓、将资源全面转向德国和波兰自营仓。关停国内仓意味着Temu的跨境直邮模式进一步收缩，欧洲本地仓从"加分项"变为核心履约路径。两条新闻共同指向一个趋势：平台在海外市场面临的合规执法力度在加大，而应对策略（本地化仓储、自营模式）需要的资本投入也在持续增加。</div>
+    <div class="nc-summary">Temu本周接连遭遇两个方向的压力：在土耳其因"锁门拒查"被罚款369.6万里拉（约合人民币80万），同时宣布关停广东国内仓、将资源全面转向德国和波兰自营仓。关停国内仓意味着Temu的跨境直邮模式进一步收缩，欧洲本地仓从"加分项"变为核心履约路径。两条新闻共同指向一个趋势：平台在海外市场面临的合规执法力度在加大，应对策略需要的资本投入也在持续增加。</div>
     <div class="nc-footer"><span>7月30-31日</span><a href="https://www.chwang.com/news/208275072351" target="_blank">原文链接 →</a></div>
   </div>
 </div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">📦 政策影响</span></div>
+    <div class="nc-title" style="padding:0 20px;">欧盟取消小额包裹免税满月：低价直邮受冲击，海外仓模式加速替代</div>
+    <div class="nc-summary">欧盟7月1日取消150欧元以下小额包裹关税豁免已满一个月。行业反馈显示政策落地后欧洲订单降幅显著，低价SKU利润被3欧元固定关税大幅挤压，平台流量加速向海外仓和本土备货商家倾斜。部分中小铺货卖家收缩欧洲业务转投美国市场，提前布局海外仓的精品卖家受影响较小。业界呼吁平台出台海外仓专项补贴、统一代缴关税与VAT，以及政府提供仓储租金和头程运费补贴。</div>
+    <div class="nc-footer"><span>8月1日</span><a href="https://stcn.com/article/detail/4053444.html" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
 
-<!-- ═══ LOGISTICS ═══ -->
 <div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
 <div class="news-grid">
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag logistics">📈 运价暴涨</span></div>
     <div class="nc-title" style="padding:0 20px;">美线8月运价暴涨：美东破万美西冲9000+，六大船司GRI齐发</div>
-    <div class="nc-summary">跨太平洋航线集装箱运价8月大幅跳涨：美东航线突破10000美元/FEU，美西逼近9000美元/FEU，六大船公司同步征收综合费率上涨附加费（GRI）。叠加红海局势持续紧张、中国六大港口因双台风出现严重拥堵（上海港延误破4.5天），全球海运运力紧张局面短期内难以缓解。卖家物流成本将显著上升，对提前收款和供应链融资的需求可能进一步增加。</div>
+    <div class="nc-summary">跨太平洋航线集装箱运价8月大幅跳涨：美东航线突破10000美元/FEU，美西逼近9000美元/FEU，六大船公司同步征收综合费率上涨附加费（GRI）。叠加红海局势持续紧张、中国六大港口因双台风出现严重拥堵（上海港延误破4.5天），全球海运运力紧张局面短期内难以缓解，卖家物流成本将显著上升。</div>
     <div class="nc-footer"><span>7月31日</span><a href="https://www.chwang.com/news/208300146051" target="_blank">原文链接 →</a></div>
   </div>
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag logistics">🚢 制裁升级</span></div>
     <div class="nc-title" style="padding:0 20px;">美OFAC将6家中国香港航运企业及6艘船列入SDN清单，涉伊朗石油运输</div>
-    <div class="nc-summary">美国财政部外国资产控制办公室（OFAC）7月30日将6家中国香港航运企业及6艘相关船舶列入特别指定国民（SDN）清单，指控其参与伊朗石油运输。这是OFAC近期对航运业最大规模的单次制裁行动之一。对跨境物流和贸易合规而言，SDN清单的扩展意味着货代和货主在承运人选择上需要加强制裁筛查，否则可能面临次级制裁风险。</div>
+    <div class="nc-summary">美国财政部外国资产控制办公室（OFAC）7月30日将6家中国香港航运企业及6艘相关船舶列入特别指定国民（SDN）清单，指控其参与伊朗石油运输。这是OFAC近期对航运业最大规模的单次制裁行动之一。货代和货主在承运人选择上需要加强制裁筛查，否则可能面临次级制裁风险。</div>
     <div class="nc-footer"><span>7月30日</span><a href="https://www.chwang.com/news/208275155477" target="_blank">原文链接 →</a></div>
   </div>
 </div>
 <div class="news-grid">
   <div class="news-card">
     <div class="nc-top"><span class="nc-tag logistics">📦 物流整合</span></div>
-    <div class="nc-title" style="padding:0 20px;">顺丰国际落地TikTok Shop欧洲12国3PL直发，平台物流深度绑定</div>
+    <div class="nc-title" style="padding:0 20px;">顺丰国际落地TikTok Shop欧洲12国3PL直发，平台物流深度绑定加速</div>
     <div class="nc-summary">顺丰国际宣布正式成为TikTok Shop欧洲12国第三方物流（3PL）服务商，提供从中国至欧洲的直发履约服务，覆盖德国、法国、意大利、西班牙等TikTok Shop已上线"本地托管"模式的市场。物流商与平台的深度绑定正在加速——平台对履约的控制力越强，卖家对平台官方物流和金融服务的依赖度就越高。</div>
     <div class="nc-footer"><span>7月31日</span><a href="https://www.chwang.com/news/208301584391" target="_blank">原文链接 →</a></div>
   </div>
 </div>
 
-<!-- ═══ REGULATORY ═══ -->
 <div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
 <div class="highlight-card" style="border-left-color:#D32F2F;">
   <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
   <div class="hl-body">
     <div class="hl-title">美贸易欺诈工作组一年追缴超10亿美元：进口欺诈升格刑事追责</div>
     <div class="hl-meta">7月31日</div>
-    <div class="hl-summary">出海网 / 美国司法部</div>美国司法部贸易欺诈特别工作组公布成立一年来累计追缴超10亿美元，针对跨境电商进口中的虚假申报、低报货值、伪造原产地等行为展开系统性刑事追诉。这是继7月初美司法部新设贸易执法部门后的首份成绩单——进口欺诈在美国正从"行政违规"升格为"刑事犯罪"。卖家在关税申报和原产地标注上的合规要求已不再停留在罚款层面，而是涉及刑事责任。
+    <div class="hl-summary">出海网 / 美国司法部</div>美国司法部贸易欺诈特别工作组公布成立一年来累计追缴超10亿美元，针对跨境电商进口中的虚假申报、低报货值、伪造原产地等行为展开系统性刑事追诉。这是继7月初美司法部新设贸易执法部门后的首份成绩单——进口欺诈在美国正从"行政违规"升格为"刑事犯罪"，卖家在关税申报和原产地标注上的合规要求已不再停留在罚款层面。
     <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">贸易欺诈</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">追缴超10亿美元</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">刑事追责</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">进口合规</span>
     <span class="hl-link"><a href="https://www.chwang.com/news/208311589726" target="_blank">原文链接 →</a></span>
   </div>
@@ -351,7 +249,7 @@
   <div class="hl-body">
     <div class="hl-title">美参议院过关二级关税法案：买俄油气国家面临100%惩罚性关税</div>
     <div class="hl-meta">7月30日</div>
-    <div class="hl-summary">出海网 / 美国参议院</div>美国参议院通过二级关税法案，授权对购买俄罗斯油气的国家征收最高100%的惩罚性关税——这意味着美国关税工具正从"对商品征税"扩展为"对地缘行为征税"。叠加7月24日刚落地的对华12.5%的301关税和仍在谈判中的各300亿美元互降框架，美国的关税政策正在进入一个高度不确定、高度工具化的阶段。跨境卖家的关税筹划需要将地缘政治风险纳入常规考量。
+    <div class="hl-summary">出海网 / 美国参议院</div>美国参议院通过二级关税法案，授权对购买俄罗斯油气的国家征收最高100%的惩罚性关税——这意味着美国关税工具正从"对商品征税"扩展为"对地缘行为征税"。叠加7月24日刚落地的对华12.5%的301关税和仍在谈判中的各300亿美元互降框架，美国关税政策正在进入一个高度不确定的阶段，跨境卖家的关税筹划需要将地缘政治风险纳入考量。
     <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">二级关税</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">100%惩罚性关税</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">关税工具化</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">地缘政治风险</span>
     <span class="hl-link"><a href="https://www.chwang.com/news/208275403880" target="_blank">原文链接 →</a></span>
   </div>
@@ -361,7 +259,7 @@
   <div class="hl-body">
     <div class="hl-title">马来西亚议员提议临时下架拼多多：东南亚平台监管升温</div>
     <div class="hl-meta">7月30日</div>
-    <div class="hl-summary">出海网</div>马来西亚国会议员正式提议临时下架拼多多（Temu），理由是该平台存在"掠夺性定价"并对本地中小商户造成不公平竞争。这是东南亚国家首次出现针对中国跨境电商平台的"下架"级别提案。此前印尼已强令Shopee对本土微企服务费减半、越南对Temu和SHEIN加强税务稽查——东南亚正在跟随欧盟和美国的步伐，从"欢迎平台入驻"转向"有条件的监管共存"。
+    <div class="hl-summary">出海网</div>马来西亚国会议员正式提议临时下架拼多多（Temu），理由是该平台存在"掠夺性定价"并对本地中小商户造成不公平竞争。这是东南亚国家首次出现针对中国跨境电商平台的"下架"级别提案。此前印尼已调整Shopee对本土微企的服务费率、越南对Temu和SHEIN加强税务稽查——东南亚的监管路径似乎在向欧盟和美国靠拢，值得持续关注。
     <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">马来西亚</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">拼多多下架提案</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">东南亚监管升温</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">掠夺性定价</span>
     <span class="hl-link"><a href="https://www.chwang.com/news/208275950908" target="_blank">原文链接 →</a></span>
   </div>
@@ -371,17 +269,25 @@
   <div class="hl-body">
     <div class="hl-title">美国三大银行协会联合发文要求强化"支付账户"管控</div>
     <div class="hl-meta">7月29日</div>
-    <div class="hl-summary">移动支付网</div>美国银行家协会（ABA）、银行政策研究所（BPI）、消费者银行家协会（CBA）联合发布声明，敦促联邦监管机构对支付稳定币发行商的"支付账户"实施与传统银行账户同等级的AML/BSA管控。这一声明正值GENIUS法案首轮规则制定延迟之际——法案原定7月18日完成的多项联邦规则至今未出台，银行界借此窗口期施压，要求确保稳定币支付账户不被排除在传统银行监管框架之外。
+    <div class="hl-summary">移动支付网</div>美国银行家协会（ABA）、银行政策研究所（BPI）、消费者银行家协会（CBA）联合发布声明，敦促联邦监管机构对支付稳定币发行商的"支付账户"实施与传统银行账户同等级的AML/BSA管控。这一声明正值GENIUS法案首轮规则制定延迟之际——法案原定7月18日完成的多项联邦规则至今未出台，银行界借此窗口期施压，要求确保稳定币支付账户不排除在传统银行监管框架之外。
     <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">三大银行协会</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">支付账户管控</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">GENIUS法案</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">AML/BSA合规</span>
     <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202607/29174856.html" target="_blank">原文链接 →</a></span>
   </div>
 </div>
-
-</div><!-- /container -->
-
-<div class="footer">
-  跨境金融新闻周报 · 仅供团队内部参考
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">5</div>
+  <div class="hl-body">
+    <div class="hl-title">外汇局部署下半年：全面推广跨境贸易高水平开放外汇收支便利化政策</div>
+    <div class="hl-meta">8月1-2日</div>
+    <div class="hl-summary">国家外汇管理局</div>国家外汇管理局8月1日召开2026年下半年外汇管理工作交流会，明确部署：全面推广跨境贸易高水平开放外汇收支便利化政策，支持跨境电商等贸易新业态发展，支持银行和支付机构为贸易新业态主体提供更便利可靠的结算路径。上半年已办理相关业务超6亿笔、服务中心微商户超190万户。同时提出推出一揽子跨境投融资便利化政策、加强跨境资金流动监测并运用AI和大数据赋能外汇监管。这是外汇局在跨境贸易便利化方向上的一次系统性政策宣示。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">外汇局</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">跨境贸易便利化</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">超6亿笔业务</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">AI赋能监管</span>
+    <span class="hl-link"><a href="https://finance.sina.com.cn/jjxw/2026-08-02/doc-inikxrzc5080322.shtml" target="_blank">原文链接 →</a></span>
+  </div>
 </div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -399,6 +305,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
 </body>
 </html>
