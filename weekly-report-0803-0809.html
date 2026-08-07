@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境金融新闻周报 8.3-8.9 | Shopee 跨境金融运营团队</title>
+<style>
+  :root {
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
+    --shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:28px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1200px; margin:0 auto; padding:0 32px 20px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1200px; margin:0 auto; padding:28px 24px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 12px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:flex; border-left:5px solid var(--orange); }
+  @media (max-width:600px) { .highlight-card { flex-direction:column; } }
+  .highlight-card .hl-num { display:flex; align-items:center; justify-content:center; min-width:70px; font-size:32px; font-weight:800; color:var(--orange); background:var(--orange-bg); }
+  .highlight-card .hl-body { padding:18px 20px; flex:1; }
+  .highlight-card .hl-body .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
+  .highlight-card .hl-body .hl-meta { font-size:11px; color:var(--text-muted); margin-bottom:8px; }
+  .highlight-card .hl-body .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:6px; }
+  .highlight-card .hl-body .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-body .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-body .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-body .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1200px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand"><span class="logo">Shopee</span></div>
+      <h1>跨境金融新闻周报</h1>
+      <div class="meta" style="margin-top:4px;">覆盖领域：跨境支付 · 电商 · 物流 · 监管</div>
+      <div class="meta" style="margin-top:2px;">重点区域：东南亚 · 拉美</div>
+      <div class="date-badge">2026年8月3日 – 8月9日</div>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><div class="num">3</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">0</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">5</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">9</div><div class="lbl">总收录</div></div>
+    </div>
+  </div>
+  <nav class="header-bar">
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="section-title" id="insights"><span>💡 本周启示</span></div>
+<div style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">万事达卡18亿美元收购BVNK——传统支付网络对稳定币的战略押注正在加速</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">万事达卡以最高18亿美元完成对BVNK的收购，这是稳定币领域迄今最大的一笔交易。BVNK年化处理约300亿美元稳定币支付、持有欧盟MiCA牌照，万事达卡通过此次收购获得了连接法币与区块链支付网络的直接控制权。加上上周Circle收购IBM区块链专利，传统支付巨头对稳定币基础设施的投入正从"合作试验"转向"并购整合"，可能影响跨境B2B支付和商户结算的底层格局。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">SWIFT零售跨境转账启动——跨境支付体验的"消费级"标准化可能加速</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">SWIFT在美国正式上线零售跨境转账服务，美银和摩根大通首批接入，覆盖25个国家。用户在汇款前即可看到手续费和汇率、多数付款数分钟到账——这些正是传统跨境汇款的长期痛点。SWIFT从机构间报文网络向消费者体验端的延伸，叠加各国即时支付系统的互联互通，可能推动跨境零售支付体验向"类国内支付"的方向演进。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">外汇管理条例修订+AI赋能监管——外汇监管框架进入升级周期</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">外汇局下半年明确将推进《外汇管理条例》修订，同时提出运用AI和大数据赋能外汇监管、高压打击非法跨境金融活动。央行四川分行同步规范"支付""清算"字样的使用、央行上海总部推动跨境人民币服务——多项政策信号叠加，指向外汇和支付领域的监管框架正在从"制度补漏"进入"系统性升级"阶段。合规的精细度和技术门槛可能同步抬升。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">4</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">数字人民币跨境支付试点扩容+中阿本币互换续签——人民币国际化两条路径同时推进</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">广东商务厅明确支持数字人民币跨境支付试点扩容，中阿央行续签1300亿元本币互换协议——两条消息分别代表了人民币国际化的"技术路径"和"制度路径"。数字人民币跨境支付从试点到扩容，本币互换从"一带一路"到拉美市场的延伸，可能逐步拓宽人民币在跨境贸易结算中的实际使用场景。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">5</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">TikTok Shop东南亚缩短取消时限——平台售后规则持续收紧</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">TikTok Shop将马来、泰、越三站的订单取消审核时限从2天缩至1天，超时自动取消。此前印尼已调整Shopee服务费率、马来西亚议员提议下架拼多多——东南亚平台对卖家的售后响应速度和运营精细度的要求正在系统性地提高。履约和售后能力可能成为卖家在东南亚市场维持竞争力的必要条件。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="payment"><span>💳 跨境支付</span></div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">万事达卡完成对稳定币基础设施商BVNK的收购：最高18亿美元，稳定币领域迄今最大交易</div>
+    <div class="hl-meta">8月3日</div>
+    <div class="hl-summary">KuCoin / Mastercard</div>万事达卡（Mastercard）8月3日宣布完成对伦敦稳定币支付基础设施公司BVNK的收购，交易金额最高达18亿美元（约15亿美元固定对价+3亿美元业绩或有付款），为稳定币领域迄今规模最大的收购案。BVNK年化处理约300亿美元稳定币支付，覆盖130余国，持有欧盟MiCA牌照。万事达卡成为首家以收购（而非合作）方式直接接入稳定币基础设施的大型上市支付网络。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Mastercard</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">BVNK</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">最高18亿美元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">MiCA牌照</span>
+    <span class="hl-link"><a href="https://www.kucoin.com/zh-hant/news/flash/mastercard-completes-1-8b-acquisition-of-stablecoin-firm-bvnk" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">SWIFT在美国正式启动国际零售转账服务：美银和摩根大通首批上线</div>
+    <div class="hl-meta">8月6日</div>
+    <div class="hl-summary">移动支付网</div>SWIFT 8月6日宣布在美国正式启动国际零售转账服务，美国银行和摩根大通成为首批上线机构。通过这两家机构接收海外汇款的个人及小微企业可体验全额到账、汇款前即显示手续费和汇率、多数付款数分钟内到账。已有超25国的60多家银行支持该体系，首批覆盖汇出方国家包括澳大利亚、巴西、中国、印度、南非、韩国、西班牙和土耳其。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">SWIFT</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">零售跨境转账</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">美银+摩根大通</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">25国60+银行</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/06163619.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">3</div>
+  <div class="hl-body">
+    <div class="hl-title">中阿（根廷）两国央行续签双边本币互换协议：规模1300亿元/28万亿比索</div>
+    <div class="hl-meta">8月6日</div>
+    <div class="hl-summary">移动支付网</div>中国人民银行与阿根廷中央银行续签双边本币互换协议，规模为1300亿元人民币/28万亿阿根廷比索，有效期五年，经双方同意可展期。协议有助于深化两国金融合作、促进双边经贸往来、维护金融市场稳定。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">中阿本币互换</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">1300亿元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">28万亿比索</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">五年期</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/06171126.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+<div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">📋 平台规则</span></div>
+    <div class="nc-title" style="padding:0 20px;">TikTok Shop马来/泰/越三站订单取消审核时限缩至1天，8月5日生效</div>
+    <div class="nc-summary">TikTok Shop自8月5日起将马来西亚、泰国、越南三个跨境站点的买家取消订单审核时限从此前的2个自然日缩短为1个自然日。超时未处理系统将自动同意取消并作废订单。时差因素可能导致夜间取消请求错过处理窗口，频繁取消记录可能拉高店铺商责取消率。</div>
+    <div class="nc-footer"><span>8月5日</span><a href="https://www.chwang.com/news/208167170422" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">外汇局部署下半年六大工作重点：推进《外汇管理条例》修订，运用AI和大数据赋能外汇监管</div>
+    <div class="hl-meta">8月7日</div>
+    <div class="hl-summary">移动支付网 / 国家外汇管理局</div>国家外汇管理局8月1日召开下半年工作交流会，明确六大重点：稳步扩大外汇领域制度型开放（包括全面推广跨境贸易高水平开放便利化政策、支持跨境电商发展）；筑牢外部冲击防波堤；推进《外汇管理条例》修订；运用AI和大数据赋能外汇监管，高压打击非法跨境金融活动；加强外汇储备经营管理；深化"数字外管""安全外管"建设。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">外汇管理条例修订</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">AI+大数据监管</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">跨境贸易便利化</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">数字外管</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/07145555.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">央行部署2026下半年八项重点工作：推进人民币跨境支付系统建设，完善数字人民币跨境基础设施</div>
+    <div class="hl-meta">8月3日</div>
+    <div class="hl-summary">移动支付网 / 中国人民银行</div>中国人民银行8月1日召开下半年工作会议，部署八项重点工作。其中与跨境支付直接相关的内容包括：开展央行间货币互换和本币结算合作、推进人民币跨境支付系统建设、完善数字人民币跨境基础设施、巩固香港离岸人民币业务枢纽地位、支持更多境外机构参与熊猫债发行。会议还总结了上半年进展：人民币跨境支付体系建设取得积极进展，人民银行法修订取得重大突破。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">央行</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">CIPS建设</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">数字人民币跨境</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">本币结算合作</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/03093006.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">3</div>
+  <div class="hl-body">
+    <div class="hl-title">央行上海总部：提升跨境人民币业务服务质效，落实离岸金融行动方案</div>
+    <div class="hl-meta">8月6日</div>
+    <div class="hl-summary">移动支付网 / 央行上海总部</div>中国人民银行上海总部8月5日召开会议，提出"进一步提升跨境人民币业务服务质效和投融资便利化水平"，"认真落实上海国际金融中心发展离岸金融行动方案，推动试点业务尽快落地见效"。会议同时要求强化基础金融服务，完善多层次支付服务体系，继续推进支付便利化工作。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">央行上海总部</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">跨境人民币</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">离岸金融</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">投融资便利化</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/06165718.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">4</div>
+  <div class="hl-body">
+    <div class="hl-title">广东商务厅：支持数字人民币跨境支付试点扩容</div>
+    <div class="hl-meta">8月6日</div>
+    <div class="hl-summary">移动支付网 / 广东省商务厅</div>广东省商务厅发布《中国（广东）自由贸易试验区发展"十五五"规划（征求意见稿）》，提出拓展数字人民币应用场景，支持数字人民币跨境支付等试点扩容，同时推动跨境理财通、跨境金融产品互认互通，加快大湾区国际商业银行等项目落地。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">广东自贸区</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">数字人民币跨境</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">试点扩容</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">大湾区</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/06161940.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">5</div>
+  <div class="hl-body">
+    <div class="hl-title">央行四川分行：规范使用"支付""清算""结算"等字样</div>
+    <div class="hl-meta">8月6日</div>
+    <div class="hl-summary">移动支付网 / 央行四川分行</div>中国人民银行四川省分行发布公告，规范辖内机构在公司名称和经营范围中使用"支付""清算""结算"等字样，非持牌支付机构不得使用上述字样，进一步清理支付市场名称乱象。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">央行四川</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">支付字样规范</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">非持牌清理</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">市场整顿</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/06105140.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.header-bar a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+</body>
+</html>
