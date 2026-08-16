@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境金融新闻周报 8.10-8.16 | Shopee 跨境金融运营团队</title>
+<style>
+  :root {
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
+    --shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:28px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1200px; margin:0 auto; padding:0 32px 20px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1200px; margin:0 auto; padding:28px 24px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 12px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:flex; border-left:5px solid var(--orange); }
+  @media (max-width:600px) { .highlight-card { flex-direction:column; } }
+  .highlight-card .hl-num { display:flex; align-items:center; justify-content:center; min-width:70px; font-size:32px; font-weight:800; color:var(--orange); background:var(--orange-bg); }
+  .highlight-card .hl-body { padding:18px 20px; flex:1; }
+  .highlight-card .hl-body .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
+  .highlight-card .hl-body .hl-meta { font-size:11px; color:var(--text-muted); margin-bottom:8px; }
+  .highlight-card .hl-body .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:6px; }
+  .highlight-card .hl-body .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-body .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-body .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-body .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1200px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand"><span class="logo">Shopee</span></div>
+      <h1>跨境金融新闻周报</h1>
+      <div class="meta" style="margin-top:4px;">覆盖领域：跨境支付 · 电商 · 物流 · 监管</div>
+      <div class="meta" style="margin-top:2px;">重点区域：东南亚 · 拉美</div>
+      <div class="date-badge">2026年8月10日 – 8月16日</div>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><div class="num">5</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">10</div><div class="lbl">总收录</div></div>
+    </div>
+  </div>
+  <nav class="header-bar">
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#logistics">🚚 跨境物流</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="section-title" id="insights"><span>💡 本周启示</span></div>
+<div style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">B2B跨境支付市场空间约为ToC的10倍，多家机构加大布局</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">中国经营报报道，B2B跨境支付市场规模约为ToC的10倍以上，XTransfer以2025年支付交易额计占全球B2B跨境贸易支付5.1%、居全球首位，其结算网络X-Net已连接171家银行。连连数字、Payoneer、寻汇SUNRATE、CoGoLinks等机构均在加大B2B领域布局。B2B跨境收款与结算网络建设，可能成为跨境支付竞争的下一个重点。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">巴西推进Pix跨境互联，拉美即时支付基础设施可能加速整合</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">巴西央行评估将Pix与境外即时支付系统连接（双边互联或多边枢纽），以降低成本、加快到账并扩大覆盖，并已与65个外国同行签署信息共享协议。Pix拥有约1.7亿用户、2025年交易量近800亿笔，是拉美核心支付基础设施。这一方向若落地，跨境收款的到账时效和成本结构可能随之变化，拉美市场的资金链路值得持续关注。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">多国央行主导的跨境结算新通道密集推进，可能逐步分流传统代理行渠道</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">本周金砖国家讨论即时支付系统与CBDC互联、英国央行测试稳定币与数字英镑协同结算、数字人民币"货币桥"累计交易额近5000亿元。多条由央行主导的跨境结算通道同时推进，均指向降低跨境支付成本、提升时效。传统代理行和美元结算渠道的份额可能面临分流。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">4</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">Sea Q2金融科技板块贷款余额增长62%，平台金融服务的渗透率持续提升</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">Sea Q2财报显示，SeaMoney（Monee）营收增长58%至14亿美元，贷款余额增长62%至111亿美元，活跃信贷用户超4000万，90天以上逾期率稳定在1.0%。平台电商与金融服务的协同仍在强化，信贷与支付业务成为平台收入增长的重要来源。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">5</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">跨国公司本外币资金集中运营业务全国推广，中资出海企业资金调度便利度提升</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">央行、外汇局将跨国公司本外币跨境资金集中运营业务推广至全国，允许集中归集外债和境外放款额度、统一管理本外币资金，自贸区内门槛减半。政策重点惠及中小规模跨国公司，可能降低企业跨境资金沉淀和结算成本，并鼓励优先使用本币开展业务。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">6</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">拉美平台金融业务高利率引发法律审视，信贷定价合规风险值得关注</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">阿根廷前议员刑事举报Mercado Pago贷款年化利率最高达1375%，并援引《刑法》高利贷条款。该指控将平台金融业务的定价合规推向司法审视。拉美市场平台信贷的高利率策略，可能面临日益上升的监管与法律风险。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="payment"><span>💳 跨境支付</span></div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">B2B跨境支付竞争加剧：XTransfer以5.1%份额居全球首位，市场约为ToC的10倍</div>
+    <div class="hl-meta">8月16日</div>
+    <div class="hl-summary">中国经营报</div>B2B跨境支付市场规模约为ToC跨境支付的10倍以上，但格局分散。以2025年支付交易额（TPV）计，XTransfer在全球B2B跨境贸易支付领域份额为5.1%，居全球首位，已服务100万企业客户。其搭建的全球结算网络X-Net截至2025年底已连接171家银行。伴随C端跨境支付竞争加剧，连连数字、PayPal中国、Payoneer派安盈、寻汇SUNRATE、CoGoLinks结行国际等机构均在加大B2B领域布局。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">B2B跨境支付</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">XTransfer份额5.1%</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">市场为ToC的10倍</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">多家机构加码B2B</span>
+    <span class="hl-link"><a href="http://www.cb.com.cn/index/show/jr6/cv/cv12526841281" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">数字人民币"货币桥"出海提速：累计交易额近5000亿元，49家银行接入</div>
+    <div class="hl-meta">8月14日</div>
+    <div class="hl-summary">上海证券报 / 新华社</div>货币桥平台处理一笔跨境支付最快可于7秒内完成，整体可节约50%以上成本。截至2025年底，货币桥累计交易额折合人民币近5000亿元，49家商业银行参与业务（其中21家为境外外资银行）。专家认为，货币桥已从概念验证阶段走向商业化放量。邮储银行、建设银行、兴业银行等已落地货物贸易汇款、跨境收款、股权并购资金划转等多场景业务。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">货币桥</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">累计近5000亿元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">49家银行</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">最快7秒</span>
+    <span class="hl-link"><a href="http://www1.xinhuanet.com/money/20260814/07ba0a1bbd3e4f87a8136a98264dcf48/c.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">3</div>
+  <div class="hl-body">
+    <div class="hl-title">英国央行数字英镑实验室测试稳定币与数字英镑协同完成跨境贸易支付</div>
+    <div class="hl-meta">8月13日</div>
+    <div class="hl-summary">The Paypers</div>英国央行数字英镑实验室启动第二阶段测试，Polygon Labs联合NOBO Finance、邓白氏（Dun & Bradstreet）等机构，测试稳定币与模拟数字英镑在同一笔跨境支付中协同结算。贸易融资场景下，出口商通过稳定币收取预付款，英国进口商以模拟数字英镑完成最终结算。该测试全程采用纯模拟环境、未使用真实货币，不构成英国央行发行数字英镑的决定。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">数字英镑实验室</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币+数字英镑</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">跨境贸易结算</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">纯模拟测试</span>
+    <span class="hl-link"><a href="https://thepaypers.com/crypto-web3-and-cbdc/news/bank-of-england-to-trial-stablecoin-digital-pound-in-trade-finance" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">4</div>
+  <div class="hl-body">
+    <div class="hl-title">金砖国家探索即时支付系统与CBDC互联，以降低跨境支付成本</div>
+    <div class="hl-meta">8月11日</div>
+    <div class="hl-summary">Reuters</div>印度央行行长桑杰·马尔霍特拉（Sanjay Malhotra）在FIBAC 2026会议上表示，金砖国家正讨论打通各国快速（即时）支付系统、联动央行数字货币（CBDC），以优化跨境交易链路、降低结算成本。路径包括提升各国本土即时支付网络的互操作性、推动CBDC体系对接。该议题仍处于多边讨论阶段，尚未形成落地方案。金砖国家已扩容至11个成员国。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">金砖</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">即时支付互联</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">CBDC对接</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">11个成员国</span>
+    <span class="hl-link"><a href="https://hk.marketscreener.com/news/brics-nations-discuss-linking-payment-systems-and-cbdcs-rbi-chief-says-ce7859dade8ef322" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">5</div>
+  <div class="hl-body">
+    <div class="hl-title">巴西央行评估将Pix即时支付系统与境外平台互联，顶住美国关税压力</div>
+    <div class="hl-meta">8月10日</div>
+    <div class="hl-summary">Reuters / 未央网</div>巴西央行在最新发布的Pix管理报告（2023-2025）中表示，正评估将Pix与境外即时支付系统建立连接，包括双边互联和参与多边支付枢纽，以实现以本币在数秒内完成跨境汇款和购物。巴西央行称此举可降低成本、加快交易、扩大覆盖并提升透明度，并与65个外国同行签署了信息共享协议。Pix拥有约1.7亿用户（约占巴西人口80%），2025年交易量近800亿笔、交易总额超35万亿雷亚尔。美国此前以Pix存在"不公平贸易做法"为由对巴西商品加征25%关税。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Pix跨境互联</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">1.7亿用户</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">2025年近800亿笔</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">美国25%关税压力</span>
+    <span class="hl-link"><a href="https://www.weiyangx.com/475077.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+<div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">💰 卖家税务</span></div>
+    <div class="nc-title" style="padding:0 20px;">印尼电商平台暂停代扣卖家0.5%所得税，Shopee 8月14日起退还已扣税款</div>
+    <div class="nc-summary">印尼税务总局指示暂缓电商平台代扣代缴卖家所得税（PPh第22条，税率0.5%）。Shopee、Tokopedia、Blibli均已自8月6日起停止代扣。Shopee自8月14日起通过"卖家余额"自动、分批退还8月1-5日已扣税款，最迟9月30日完成；Tokopedia最迟9月30日退回；Blibli仍在等待官方退税机制规定。退款全程由系统自动处理，卖家无需任何操作。</div>
+    <div class="nc-footer"><span>8月14日</span><a href="https://www.cnbcindonesia.com/tech/20260814103037-37-759241/shopee-kembalikan-pajak-05-ke-seller-hari-ini-cek-mekanismenya" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">📈 财报</span></div>
+    <div class="nc-title" style="padding:0 20px;">Sea发布Q2财报：Shopee GMV增长28%至383亿美元，SeaMoney贷款余额增长62%</div>
+    <div class="nc-summary">Sea公布2026年Q2业绩：总营收78亿美元，同比增长48%。电商板块Shopee GMV达383亿美元（+28%），订单42亿笔，广告收入增长超70%，管理层预计Shopee全年调整后EBITDA有望达到10亿美元，巴西仍是增长最快的市场。金融科技板块SeaMoney（Monee）营收14亿美元（+58%），贷款余额达111亿美元（+62%），活跃信贷用户超4000万，90天以上逾期率稳定在1.0%。</div>
+    <div class="nc-footer"><span>8月11日</span><a href="https://www.investing.com/news/company-news/sea-q2-2026-slides-revenue-surges-48-shopee-eyes-1b-ebitda-93CH-4851856" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">✈️ 新航线</span></div>
+    <div class="nc-title" style="padding:0 20px;">京东物流开通越南至美国跨境小包专线，覆盖河内、胡志明等地本地揽收</div>
+    <div class="nc-summary">京东物流开通越南至美国跨境小包专线，在河内、胡志明、北宁、海防等城市提供本地头程上门揽收，打通出口清关、空运干线及末端派送全链路，面向在越南备货、拓展美国市场的跨境卖家。同步新设广西边境仓，并升级东南亚多国大件送装一体化服务。</div>
+    <div class="nc-footer"><span>8月12日</span><a href="https://www.sohu.com/a/1062860631_122701901" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">央行、外汇局：跨国公司本外币跨境资金集中运营业务全国推广，9月14日施行</div>
+    <div class="hl-meta">8月14日</div>
+    <div class="hl-summary">经济参考报 / 中国人民银行</div>中国人民银行、国家外汇管理局8月14日联合发布通知，将跨国公司本外币跨境资金集中运营业务推广至全国，自9月14日起施行。该业务允许跨国公司集中运营境内外本外币资金，归集外债和境外放款额度，实现集团层面统筹调配。准入门槛为：境内成员企业上年度国际收支规模合计不低于等值7亿元，或境内营收不低于10亿元且境外营收不低于2亿元；自贸试验区内主办企业门槛减半。政策重点支持中小规模跨国公司，鼓励优先使用本币。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">资金集中运营</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9月14日施行</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">中小跨国公司</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">自贸区门槛减半</span>
+    <span class="hl-link"><a href="http://www.jjckb.cn/20260814/eb77884237ab4485936477b5c5d6ef8d/c.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">阿根廷前议员刑事举报Mercado Pago涉嫌高利贷：年化利率最高1375%</div>
+    <div class="hl-meta">8月12日</div>
+    <div class="hl-summary">La Política Online</div>阿根廷前立法委员、工人党成员加布里埃尔·索拉诺（Gabriel Solano）8月12日向法院提起刑事指控，起诉美客多（Mercado Libre）创始人马科斯·加尔佩林（Marcos Galperin），指控Mercado Pago及Mercado Crédito发放的贷款年化利率最高达1375%、年化总融资成本（CFTEA）超1300%，涉嫌高利贷。索拉诺援引《刑法》第175条之二，并对比同一公司在巴西的年化融资成本仅63.13%。美客多金融业务约占其阿根廷营收的64%。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">Mercado Pago</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">年化最高1375%</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">刑事举报</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">金融占阿根廷营收64%</span>
+    <span class="hl-link"><a href="https://www.lapoliticaonline.com/politica/denunciaron-a-mercado-libre-por-usura-y-aseguran-que-cobra-tasas-20-veces-mas-altas-que-en-brasil/" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.header-bar a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+</body>
+</html>
