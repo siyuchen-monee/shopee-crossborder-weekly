@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境金融新闻周报 8.24-8.30 | Shopee 跨境金融运营团队</title>
+<style>
+  :root {
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
+    --shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:28px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1200px; margin:0 auto; padding:0 32px 20px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1200px; margin:0 auto; padding:28px 24px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 12px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .nc-tag.logistics { background:#FFF0E8; color:var(--orange-dk); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:flex; border-left:5px solid var(--orange); }
+  @media (max-width:600px) { .highlight-card { flex-direction:column; } }
+  .highlight-card .hl-num { display:flex; align-items:center; justify-content:center; min-width:70px; font-size:32px; font-weight:800; color:var(--orange); background:var(--orange-bg); }
+  .highlight-card .hl-body { padding:18px 20px; flex:1; }
+  .highlight-card .hl-body .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
+  .highlight-card .hl-body .hl-meta { font-size:11px; color:var(--text-muted); margin-bottom:8px; }
+  .highlight-card .hl-body .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:6px; }
+  .highlight-card .hl-body .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-body .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-body .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-body .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1200px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand"><span class="logo">Shopee</span></div>
+      <h1>跨境金融新闻周报</h1>
+      <div class="meta" style="margin-top:4px;">覆盖领域：跨境支付 · 电商 · 物流 · 监管</div>
+      <div class="meta" style="margin-top:2px;">重点区域：东南亚 · 拉美</div>
+      <div class="date-badge">2026年8月24日 – 8月30日</div>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><div class="num">4</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">8</div><div class="lbl">总收录</div></div>
+    </div>
+  </div>
+  <nav class="header-bar">
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#logistics">🚚 跨境物流</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="section-title" id="insights"><span>💡 本周启示</span></div>
+<div style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">稳定币跨境结算由试点走向落地，卡组织与金融机构密集布局</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">本周Visa加入新加坡金管局BLOOM计划并携手Nium试点7×24稳定币结算，韩国BDACS与Devall共建稳定币跨境支付系统，Dunamu与Visa签署稳定币与AI支付合作。多条线索指向同一方向：稳定币正由技术验证进入机构级结算应用，BLOOM计划参与者已覆盖DBS、OCBC、UOB、Partior、Circle、Stripe等机构，其对传统跨境结算渠道的分流效应值得持续关注。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">稳定币监管态度出现分化，代币化存款被提出作为替代路径</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">日本金融厅取消100万日元稳定币交易上限、组建专项监管部门，与国际清算银行（BIS）总经理在杰克逊霍尔对稳定币的质疑形成对照，后者主张以代币化银行存款作为更优替代。各国对稳定币的监管立场分化，可能影响跨境支付机构在不同市场的合规策略与业务布局。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">东南亚平台政策转向扶持本土卖家，本土化经营成为竞争变量</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">印尼中小企业部拟对Shopee、Tokopedia、TikTok Shop等平台的本土小微卖家减免最高50%服务费，政策落地依赖SAPA UMKM系统申报与政府、平台双重审核。此类激励指向东南亚平台对本土供给的倾斜，跨境卖家在印尼等市场的本土化经营能力可能成为新的竞争变量。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">4</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">东南亚物流竞争深化，履约格局持续演变</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">极兔速递中期业绩显示东南亚市场份额升至38.1%、连续六年第一，拉美等新市场包裹量同比增超一倍。头部物流企业在东南亚的份额与时效竞争可能进一步深化，跨境卖家的履约选择与确定性随之演变。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="payment"><span>💳 跨境支付</span></div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">Visa加入新加坡金管局BLOOM计划，Nium落地稳定币跨境结算试点</div>
+    <div class="hl-meta">8月25日</div>
+    <div class="hl-summary">移动支付网</div>Visa于8月25日加入新加坡金融管理局（MAS）牵头的BLOOM计划，该计划旨在打通传统支付网络与稳定币支付通道、提升金融机构结算能力。Nium成为Visa在BLOOM框架下的首个试点合作方，双方探索高效跨境资金转移新模式，支持美元、欧元等主流合规稳定币，实现7×24小时全天候结算，相较行业现有仅工作日办理的结算模式可缩短资金结算时延、提升资金流转效率。BLOOM计划参与者还包括DBS、OCBC、UOB、Partior、Circle、Stripe等机构。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">MAS BLOOM计划</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Nium首个试点</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">7×24稳定币结算</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">美元/欧元</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/25092854.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">DBS与Stripe达成战略合作，聚焦亚洲跨境支付与代理式商务</div>
+    <div class="hl-meta">8月26日</div>
+    <div class="hl-summary">The Digital Banker / 新加坡商业评论</div>星展银行（DBS）与Stripe于8月26日签署战略合作谅解备忘录，旨在加速亚洲代理式商务与跨境支付增长。Stripe将借助DBS的数字银行能力、资金流动与现金管理方案，为商家增强跨境收款并优化跨实体流动性与现金状况；DBS则探索Stripe全球平台与嵌入式金融能力以扩展跨境网络。双方还计划联合开发代理式AI能力，使客户更高效、安全地完成交易。据McKinsey估计，到2030年AI代理可能管理3万亿至5万亿美元消费者商务；亚洲对外跨境支付预计由2025年的13.5万亿美元增至2033年的24万亿美元。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">DBS×Stripe战略合作</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">代理式商务</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">亚洲跨境收款</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">代理式AI联合开发</span>
+    <span class="hl-link"><a href="https://thedigitalbanker.com/dbs-and-stripe-partner-to-accelerate-agentic-commerce-in-asia/" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">3</div>
+  <div class="hl-body">
+    <div class="hl-title">韩国BDACS联合Devall共建稳定币跨境支付系统，出口贸易可稳定币收款</div>
+    <div class="hl-meta">8月28日</div>
+    <div class="hl-summary">移动支付网</div>韩国数字资产托管企业BDACS联合B2B发票及收款自动化平台Devall，共建稳定币跨境支付结算基础设施，支持韩国出口商接收海外买家以USDT、USDC等稳定币付款、最终以韩元结算，出口商无需持有数字资产。系统覆盖发票开具、付款核验、韩元结算全流程，并计划接入BDACS发行的韩元稳定币KRW1，打通海外稳定币汇款与韩元支付场景。由于外汇申报、税务、反洗钱、付款人核验等监管标准尚未完善，项目将依据韩国《外汇交易法》等法规分阶段落地。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币收款韩元结算</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">KRW1韩元稳定币</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">B2B出口结算</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">分阶段落地</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/28112251.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">4</div>
+  <div class="hl-body">
+    <div class="hl-title">Dunamu与Visa签署战略合作，探索稳定币支付与AI代理式商务</div>
+    <div class="hl-meta">8月28日</div>
+    <div class="hl-summary">EDGEN</div>韩国Upbit运营商Dunamu于8月26日在Visa旧金山全球市场支援中心与Visa签署战略合作协议，探索稳定币支付、跨境汇款及AI驱动金融服务，重点研究AI代理替用户完成购物与支付的"代理式商务"模式。Dunamu CEO吴京锡与Visa全球总裁Oliver Jenkyn出席签约。对于多稳定币项目OUSD，Dunamu表示其仅是正在评估的项目之一，公司将构建开放式架构连接多种稳定币与传统金融系统。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币+AI支付</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">代理式商务</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Upbit运营商Dunamu</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">OUSD开放式评估</span>
+    <span class="hl-link"><a href="https://www.edgen.tech/zh-tw/news/post/dunamu-visa-partner-on-stablecoin-ai-payments-as-ousd-weighs-140-member-alliance" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+<div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">🏛️ 平台政策</span></div>
+    <div class="nc-title" style="padding:0 20px;">印尼拟对Shopee等平台本土小微卖家减免最高50%服务费</div>
+    <div class="nc-summary">印尼中小企业部（Kementerian UMKM）拟对在Shopee、Tokopedia、TikTok Shop等平台销售本土产品的微型与小型企业（UMK）提供最高50%的平台服务费折扣，涵盖管理费、佣金等按笔交易收取的费用。政策依据为2026年6月17日发布的中小企业部第3号条例，配套部长令预计8月24日或最迟8月25日签署、8月底生效。卖家需通过SAPA UMKM系统申请并声明产品为印尼本土生产，经政府与平台双重审核后，折扣预计在审核完成后次月生效。</div>
+    <div class="nc-footer"><span>8月24日</span><a href="https://www.antaranews.com/berita/5705621/menteri-umkm-diskon-biaya-layanan-lokapasar-mulai-akhir-agustus-2026" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">📦 中期业绩</span></div>
+    <div class="nc-title" style="padding:0 20px;">极兔速递全球日单首破一亿，东南亚份额38.1%连续六年第一</div>
+    <div class="nc-summary">极兔速递8月20日发布的2026年中期业绩显示，上半年全球包裹量175亿件（同比增25.1%），第二季度日均包裹量首次突破1亿件；收入76.7亿美元（同比增39.5%），经调整净利润3.5亿美元（同比增124.3%）。东南亚市场包裹量55.2亿件（同比增71.2%），市场份额提升至38.1%、连续六年位居第一；拉美、中东等市场包裹量同比增119.9%。8月25日华泰证券维持"买入"评级，目标价上调至13.10港元。</div>
+    <div class="nc-footer"><span>8月25日</span><a href="https://www.p5w.net/roll/lanjinger/202608/t20260825_6498105.htm" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">日本金融厅取消稳定币100万日元交易上限，优化机构准入</div>
+    <div class="hl-meta">8月25日</div>
+    <div class="hl-summary">移动支付网</div>日本金融厅（FSA）近日正式取消部分运营商稳定币100万日元（约6700美元）的交易上限，该限额源自2023年生效的修订版《支付服务法》，此前仅允许稳定币用于小额点对点支付。此次取消旨在打通跨境支付、资金管理、交易结算等场景；日本还将组建"加密货币与稳定币专项监管部门"，简化审批流程，并明确海外稳定币入市标准，符合本地合规要求的境外稳定币发行商可合法进入日本市场。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">取消100万日元上限</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">打通跨境支付场景</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">专项监管部门</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">海外发行商准入</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202608/25093500.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">BIS总经理质疑稳定币大规模支付可靠性，主张代币化存款</div>
+    <div class="hl-meta">8月28日</div>
+    <div class="hl-summary">Reuters / Investing</div>国际清算银行（BIS）总经理Pablo Hernández de Cos于8月28日在杰克逊霍尔经济政策研讨会上质疑稳定币能否作为大规模支付手段可靠运作，主张代币化银行存款是更优替代方案。他指出稳定币可能导致银行资金成本上升并转嫁给家庭与企业、破坏货币"单一性"、平台间缺乏真正互操作性、反洗钱管控难以一致执行，且美元挂钩稳定币的广泛采用可能侵蚀货币主权、引发"数字美元化"担忧；同时他也认为两种工具可以共存。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">Jackson Hole发言</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">质疑稳定币</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">主张代币化存款</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">数字美元化担忧</span>
+    <span class="hl-link"><a href="https://www.investing.com/news/economy-news/stablecoins-not-a-credible-means-of-payment-at-scale-bis-chief-says-4881677" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.header-bar a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+</body>
+</html>
