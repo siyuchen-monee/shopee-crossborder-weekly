@@ -16,9 +16,9 @@
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
     background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
   }
-  .header { background:var(--white); border-bottom:1px solid var(--border); padding:28px 0 0; position:sticky; top:0; z-index:100; }
-  .header-top { max-width:1200px; margin:0 auto; padding:0 32px 20px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
-  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:22px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1400px; margin:0 auto; padding:0 32px 18px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
   .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
   .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
   .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
@@ -30,10 +30,10 @@
   .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
   .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
   .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
-  .container { max-width:1200px; margin:0 auto; padding:28px 24px 48px; }
-  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 12px; display:flex; align-items:center; gap:8px; }
+  .container { max-width:1400px; margin:0 auto; padding:24px 32px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 14px; display:flex; align-items:center; gap:8px; }
   .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
-  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  .news-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:16px; margin-bottom:20px; }
   @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
   .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
   .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
@@ -46,18 +46,18 @@
   .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
   .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
   .news-card .nc-footer a:hover { text-decoration:underline; }
-  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:flex; border-left:5px solid var(--orange); }
-  @media (max-width:600px) { .highlight-card { flex-direction:column; } }
-  .highlight-card .hl-num { display:flex; align-items:center; justify-content:center; min-width:70px; font-size:32px; font-weight:800; color:var(--orange); background:var(--orange-bg); }
-  .highlight-card .hl-body { padding:18px 20px; flex:1; }
-  .highlight-card .hl-body .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
-  .highlight-card .hl-body .hl-meta { font-size:11px; color:var(--text-muted); margin-bottom:8px; }
-  .highlight-card .hl-body .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:6px; }
-  .highlight-card .hl-body .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
-  .highlight-card .hl-body .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
-  .highlight-card .hl-body .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
-  .highlight-card .hl-body .hl-link a:hover { color:var(--orange); }
-  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1200px; margin:0 auto; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:block; border-left:5px solid var(--orange); padding:18px 22px; }
+  .highlight-card .hl-header { display:flex; align-items:flex-start; gap:12px; margin-bottom:8px; }
+  .highlight-card .hl-num { flex-shrink:0; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; color:var(--orange); background:var(--orange-bg); border-radius:50%; }
+  .highlight-card .hl-title-wrap { flex:1; }
+  .highlight-card .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:3px; line-height:1.45; }
+  .highlight-card .hl-meta { font-size:11px; color:var(--text-muted); }
+  .highlight-card .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.75; margin-bottom:8px; }
+  .highlight-card .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1400px; margin:0 auto; }
   @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
 </style>
@@ -74,11 +74,11 @@
       <div class="date-badge">2026年8月31日 – 9月6日</div>
     </div>
     <div class="header-stats">
-      <div class="header-stat"><div class="num">2</div><div class="lbl">跨境支付</div></div>
-      <div class="header-stat"><div class="num">1</div><div class="lbl">电商平台</div></div>
-      <div class="header-stat"><div class="num">2</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">4</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境物流</div></div>
       <div class="header-stat"><div class="num">3</div><div class="lbl">监管动向</div></div>
-      <div class="header-stat"><div class="num">8</div><div class="lbl">总收录</div></div>
+      <div class="header-stat"><div class="num">9</div><div class="lbl">总收录</div></div>
     </div>
   </div>
   <nav class="header-bar">
@@ -98,29 +98,22 @@
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">银行从"服务稳定币"转向"联合发行稳定币"，竞争进入新阶段</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">21家全球金融机构（合计管理资产超65万亿美元）宣布联合发行美元稳定币，直接对标Tether、Circle主导的稳定币市场。银行系稳定币的入场，可能改变跨境支付与数字资产结算的基础设施格局，其实际采用仍取决于互通性、流动性与市场接受度。</div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">大促季前平台集体抢供给：东南亚"免流水+长免佣"与拉美"半佣+免佣"叠加放量</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">TikTok Shop 东南亚自8月31日起对个体工商户免流水入驻叠加90天保证金豁免与120天佣金减免，Shopee 同周把新加坡首店免佣由3个月延长至6个月、每月上限500单，TikTok Shop 巴西对9-11月新入驻本土卖家直接半佣并对家居/园艺/母婴品类免佣。新卖家批量入场叠加各类让利政策，9.9至双11大促期间各站点的供给端会显著扩容，但价格带与选品的同质化竞争压力也会同步抬升。</div>
       </div>
     </div>
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF5F5;border-radius:10px;border-left:4px solid #D32F2F;">
       <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">2</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">稳定币监管密集落地，跨境发行认可与储备合规成为焦点</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">新加坡金管局就稳定币修法征求意见（100%储备、禁止付息、有限承认海外稳定币），G20承诺推进稳定币监管框架，泰国拟限制稳定币每日转账上限。监管重心由"是否允许"转向跨境发行认可、储备与反洗钱等实施层面，跨境支付机构在不同市场的合规要求可能进一步抬升。</div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
-      <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">3</span>
-      <div>
-        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">电商平台旺季前抢商家，入驻门槛与扶持力度同步放宽</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">TikTok Shop自8月31日起对个体户开放免流水入驻，并叠加最高90天保证金豁免、120天佣金减免等扶持。平台在Q4旺季前加大招商力度，东南亚跨境卖家的供给竞争可能进一步加剧。</div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">欧美与东南亚合规节奏同步加密：法国反超快时尚法生效叠加越南 9 月加密/跨境新规</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">法国反超快时尚法 9 月 1 日正式生效，2026 年单件最高罚 12 欧元、2030 年可达 19.5 欧元（不超过税前价 50%），且中欧 7 月起对小额包裹征收 3 欧元/类目关税；同期越南以 Decree 284（加密资产违规罚款 9 月 1 日起最高 2 亿越南盾）、Decree 292/2026/ND-CP（跨境贸易新规 9 月 5 日生效）双线落地。欧美关税壁垒与东南亚合规升级正在同一窗口期内并行推进，跨境卖家需要在欧洲侧的清关计价、东南亚侧的税务与商品归类两端同步排查合规风险。</div>
       </div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
-      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">4</span>
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">3</span>
       <div>
-        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">东南亚跨境航运新航线密集开通，区域内连通性提升</div>
-        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">中远海控SIS1直航航线挂靠汕头广澳港、开辟粤东直航印尼通道，太平船务开通印尼—泰国周班新航线。多条跨境及区域内航运线路开通，东南亚物流网络的时效与覆盖可能进一步优化。</div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">美东运价突破万美元，Q4 旺季的订舱与备货缓冲需要前置</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">SCFI 综合指数 3509.54 点连涨 5 周创近 25 个月新高，美东航线 10046 美元/FEU（周涨 3.57%）、美西 6940 美元/FEU，巴拿马运河因厄尔尼诺干旱将 9 月日通行量从 36 艘压缩至 34 艘、9 月 15 日起进一步降至 32 艘。多船公司已宣布 9 月上调美东线 500-700 美元/FEU 并加收 200-400 美元运河附加费，叠加台风季港口拥堵，9.9 大促与 Q4 圣诞备货的头程订舱、截关缓冲需整体前置 1-2 周，重货美线订单需重新测算运费占比对毛利的影响。</div>
       </div>
     </div>
   </div>
@@ -128,82 +121,92 @@
 
 <div class="section-title" id="payment"><span>💳 跨境支付</span></div>
 <div class="highlight-card" style="border-left-color:#F4743B;">
-  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
-  <div class="hl-body">
-    <div class="hl-title">HashKey HSP与ONERWAY达成战略合作，打通稳定币链上结算与法币出金</div>
-    <div class="hl-meta">9月3日</div>
-    <div class="hl-summary">Global Fintech Series</div>HashKey On-Chain的结算协议HSP与跨境支付服务商ONERWAY达成战略合作，这是HSP首次对接Web2支付机构，也是ONERWAY引入的首个Web3链上结算协议。ONERWAY持有英国EMI、欧洲PI、香港MSO、美国MSB、新加坡MPI等多地牌照，服务全球2000多家商户。双方旨在为跨境电商、游戏、SaaS等商户打通"稳定币链上结算+法币出金"通道，解决跨境结算周期长、汇损、多币种核算等痛点，HSP协议原生集成链上AML机制。
-    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Web2/Web3结算合作</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币+法币出金</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">多地牌照</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">2000+商户</span>
-    <span class="hl-link"><a href="https://globalfintechseries.com/banking/digital-payments/hashkey-settlement-platform-hsp-and-onerway-announce-strategic-partnership-to-shape-the-future-of-on-chain-payments-and-support-cross-border-commerce-development/" target="_blank">原文链接 →</a></span>
+  <div class="hl-header">
+    <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">XTransfer 获阿联酋央行"零售支付服务牌照"原则性批准，瞄准中东—非洲 B2B 跨境支付</div>
+      <div class="hl-meta">9月3日</div>
+    </div>
   </div>
-</div>
-<div class="highlight-card" style="border-left-color:#F4743B;">
-  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
-  <div class="hl-body">
-    <div class="hl-title">高盛、美银、花旗等21家机构拟联合发行美元稳定币</div>
-    <div class="hl-meta">9月1日</div>
-    <div class="hl-summary">移动支付网</div>9月1日，由高盛、美国银行、花旗、德意志银行、瑞银、桑坦德、三菱日联、富达投资等21家全球金融机构组成的联盟宣布，计划2026年下半年成立独立实体、2027年上半年发行美元稳定币，后续拓展至欧元等G7货币。该稳定币面向批发、机构及零售市场，应用场景覆盖跨境支付与数字资产结算。21家成员合计管理资产超65万亿美元，项目明确遵循美国《GENIUS法案》与欧盟MiCA框架。截至9月2日稳定币总市值约3038亿美元，消息公布后Circle股价一度下挫约6%。
-    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">21家机构65万亿美元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">2027上半年发行</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">跨境支付结算</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">GENIUS/MiCA合规</span>
-    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202609/04171903.html" target="_blank">原文链接 →</a></span>
-  </div>
+  <div class="hl-summary">经济通通讯社（etnet 港股财经）</div>9月3日，B2B 跨境贸易支付平台 XTransfer 宣布获得阿联酋中央银行（CBUAE）颁发的"阿联酋零售支付服务牌照"原则性批准。完成监管要求的预发行条件后，XTransfer 将可为阿联酋本土客户提供合规的 B2B 支付服务，强化其支持中国—中东—非洲贸易往来的基础设施能力。XTransfer 此前已持有中国大陆、香港、英国、美国、新加坡、荷兰、澳大利亚、加拿大等主要贸易枢纽的支付牌照，阿联酋牌照是其全球合规版图的第 9 张，也是中东首张——意味着中资 B2B 跨境支付平台对中东这一连接中国与非洲/南亚的关键转口枢纽的覆盖进入实质阶段。
+  <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">原则性批准</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">CBUAE 颁发</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">中-中东-非洲 B2B</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">第 9 张全球牌照</span>
+  <span class="hl-link"><a href="https://www.etnet.com.hk/www/tc/news/news-article.php?newsid=20260903560&section=special" target="_blank">原文链接 →</a></span>
 </div>
 
 <div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
 <div class="news-grid">
   <div class="news-card">
-    <div class="nc-top"><span class="nc-tag ecom">🛒 平台招商</span></div>
-    <div class="nc-title" style="padding:0 20px;">TikTok Shop东南亚8月31日起个体户免流水入驻，旺季前放宽门槛</div>
-    <div class="nc-summary">自8月31日起，持有中国大陆个体工商户营业执照的商家无需第三方平台经营流水证明、无需邀请码即可申请入驻TikTok Shop东南亚跨境电商，零经验个体户也可入驻。新商家可享"飞轮计划"扶持，包括最高90天保证金豁免、最长120天佣金减免及满减券资源；成熟大商可走"亿元直通车"通道（每月最高15000美元货品补贴、单月最高10000美元广告金）。此举被视为平台在Q4旺季前抢商家、加速供给扩张。</div>
-    <div class="nc-footer"><span>8月31日</span><a href="https://www.chwang.com/news/209606782004" target="_blank">原文链接 →</a></div>
+    <div class="nc-top"><span class="nc-tag ecom">🏪 平台政策</span></div>
+    <div class="nc-title" style="padding:0 20px;">TikTok Shop 东南亚跨境降低入驻门槛：个体工商户免流水、免邀请码直接入驻</div>
+    <div class="nc-summary">自8月31日起，持有中国大陆个体工商户营业执照的商家，无需提供第三方平台经营流水证明、无需额外申请邀请码，即可直接申请入驻 TikTok Shop 东南亚跨境电商——继今年1月企业执照免流水入驻后的二次放宽。新入驻商家可同步享受"飞轮计划"扶持：最高90天保证金豁免、最长120天佣金减免、平台提供的海量满减券资源。优质大商另有"亿元直通车"专项扶持：每月最高1.5万美元货品补贴、单月最高1万美元广告金及客户经理1对1专属服务。大促季前放宽招商，平台抢供给意图明显。</div>
+    <div class="nc-footer"><span>9月2日</span><a href="https://m.ebrun.com/ebrungo/zb/704174.html" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">📺 直播电商</span></div>
+    <div class="nc-title" style="padding:0 20px;">美客多上线 Mercado Livre Live：拉美直播购物功能内嵌独立直播流</div>
+    <div class="nc-summary">9月1日，美客多（Mercado Livre）正式上线直播购物功能 Mercado Livre Live，将直播流以独立通道嵌入主 App，并整合其分销项目 Venda com Afiliados——该项目目前已吸纳超 900 万名创作者，2026 年 Q2 在巴西录得 208 单/分钟的高速成交。配套营销以 Rock in Rio 音乐节为锚点展开 7 天 × 8 小时的发布期直播活动。拉美内容电商进入与 TikTok Shop 直接对垒阶段，巴西市场的流量与佣金争夺预计进一步加剧。</div>
+    <div class="nc-footer"><span>9月1日</span><a href="https://www.xmshredder.com/xinwendongtai/xingyezixun/3007.html" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">🏪 平台政策</span></div>
+    <div class="nc-title" style="padding:0 20px;">TikTok Shop 巴西加码本土商家扶持：9-11月新入驻卖家前90天佣金减半，家居/园艺/母婴类目直接免佣</div>
+    <div class="nc-summary">9月2日，TikTok Shop 巴西公布新一轮本土商家扶持计划：2026年9-11月期间新入驻的巴西本土卖家，前90天可享类目佣金减半优惠；部分家居、园艺、母婴类目直接免佣。平台同步开启流量激励池：符合条件的商家发布商品短视频与开展直播带货，可获得平台免费流量加持，并上线免费线上训练营，覆盖短视频剪辑、直播话术、选品逻辑等运营基础。TikTok Shop 在巴西直接对标美客多展开"招商 + 让利"组合拳。</div>
+    <div class="nc-footer"><span>9月2日</span><a href="https://english.ebrun.com/20260904/704330.shtml" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">🏪 平台政策</span></div>
+    <div class="nc-title" style="padding:0 20px;">Shopee 新加坡首店免佣延至6个月：每月免佣上限500单，与八站点3个月政策叠加执行</div>
+    <div class="nc-summary">9月3日，Shopee 更新新卖家佣金激励政策：新加坡站点首店免佣期由3个月延长至6个月，每月免佣订单上限500单，与2026年1月1日起已生效的八站点（新加坡、马来西亚、泰国、越南、菲律宾、巴西、墨西哥、台湾）首店前3个月免佣或10%直减政策叠加执行，形成"新加坡6个月+其余站点3个月"的分层让利格局。规则以首店激活销售权时间为准、按每月19日划节点，跨境直邮与官方/三方海外仓均覆盖，但墨西哥仅限跨境直邮、泰国首店须日均上架≥10件、巴西与墨西哥直邮首店走10%直减而非全额免佣。</div>
+    <div class="nc-footer"><span>9月3日</span><a href="https://www.amz123.com/kx/jR2iGPhs" target="_blank">原文链接 →</a></div>
   </div>
 </div>
 
 <div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
 <div class="news-grid">
   <div class="news-card">
-    <div class="nc-top"><span class="nc-tag logistics">🚢 新航线</span></div>
-    <div class="nc-title" style="padding:0 20px;">太平船务开通印尼—泰国周班新航线，强化东南亚区域内连通</div>
-    <div class="nc-summary">太平船务（PIL）推出印尼—泰国新航线（ITS），连接印尼、马来西亚、新加坡、泰国四国六个港口，投入3艘船舶，首航9月5日从巴生港启航。挂靠顺序为巴生港—新加坡—林查班—曼谷—林查班—新加坡—巴生港—三宝垄—泗水—巴生港，旨在拓展东南亚区域内航线覆盖。</div>
-    <div class="nc-footer"><span>9月5日</span><a href="https://www.worldports.org/pil-launches-weekly-indonesia-thailand-service-its-to-expand-intra-southeast-asia-coverage/" target="_blank">原文链接 →</a></div>
-  </div>
-  <div class="news-card">
-    <div class="nc-top"><span class="nc-tag logistics">🚢 新航线</span></div>
-    <div class="nc-title" style="padding:0 20px;">中远海控SIS1直航航线挂靠汕头广澳港，开辟粤东直航印尼通道</div>
-    <div class="nc-summary">中远海控SIS1直航航线9月4日正式挂靠汕头广澳港区，开辟粤东直航印尼的海上快车道，固定周班、全程无需中转，契合跨境电商小件、高频、多批次出货特征，支撑粤东玩具、家居用品、服装、小家电、陶瓷等轻工消费品出口印尼。</div>
-    <div class="nc-footer"><span>9月4日</span><a href="http://www.shipping-daily.com/news/detail?id=7175" target="_blank">原文链接 →</a></div>
+    <div class="nc-top"><span class="nc-tag logistics">📈 运价动向</span></div>
+    <div class="nc-title" style="padding:0 20px;">SCFI 连续第五周上涨：美东线再破1万美元/FEU，巴拿马运河9月进一步限航</div>
+    <div class="nc-summary">最新一期上海出口集装箱运价指数（SCFI）报3509.54点，单周上涨99.91点、涨幅2.93%，连续第五周上涨且创近25个月新高。美东航线40尺柜运价周涨3.57%达10046美元、重新突破1万美元关口（部分船公司报价已达11550美元），美西航线9月上半月现货参考价7500-7700美元/FEU。巴拿马运河因厄尔尼诺干旱持续收紧通航：9月初每日通行量由36艘降至34艘，9月15日起进一步降至32艘。多船公司已宣布9月上调美东线500-700美元/FEU 并加收 200-400美元运河附加费。与北美上涨形成对比，欧洲线40尺柜报价已跌至3800美元，呈现明显的"K型分化"。</div>
+    <div class="nc-footer"><span>8月31日</span><a href="https://www.cccme.org.cn/news/details.aspx?classid=8C92359A9456952E&id=9B37AA4867B05ACEFF9D15E75DB3D482&xgid=F868932F64EB7AAF" target="_blank">原文链接 →</a></div>
   </div>
 </div>
 
 <div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
 <div class="highlight-card" style="border-left-color:#D32F2F;">
-  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
-  <div class="hl-body">
-    <div class="hl-title">泰国SEC拟限制稳定币每日500万泰铢转账上限</div>
-    <div class="hl-meta">9月3日</div>
-    <div class="hl-summary">Market Insiders / Siam Blockchain</div>泰国证券交易委员会（SEC）9月3日原则性同意加强稳定币交易监管，拟限制客户通过单一数字资产服务商每日转入、转出稳定币各不超过500万泰铢（约15万美元），并要求交易两端账户完成身份验证且属于同一客户，禁止第三方账户转入转出。规则配套旅行规则（Travel Rule）信息传递要求，旨在降低洗钱、科技犯罪及规避跨境汇款规范的风险。新规尚未生效，泰国SEC计划9月公开征求意见后正式发布。
-    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">每日500万泰铢上限</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">禁止第三方账户</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">旅行规则</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9月征求意见</span>
-    <span class="hl-link"><a href="https://marketinsiders.in/2026/09/03/thailand-tightens-stablecoin-rules-with-new-transfer-limits/" target="_blank">原文链接 →</a></span>
+  <div class="hl-header">
+    <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">法国反超快时尚法9月1日正式生效：单件最高罚12欧元、2030年升至19.5欧元，商务部9月3日强硬回应</div>
+      <div class="hl-meta">9月1日生效（商务部9月3日回应）</div>
+    </div>
   </div>
+  <div class="hl-summary">欧洲趋势（European Trends）／环球时报</div>9月1日，法国 2026-602 号法律（反超快时尚法）正式生效，针对大规模生产低品质纺织品的所谓"超快时尚"模式按件收取环保附加费：2026年单件内裤0.5欧元、T恤2欧元、牛仔裤9欧元、外套12欧元，到2030年最高可达19.5欧元/件，上限为产品税前价的50%。征收对象明确锁定 Shein、Temu、速卖通等亚洲电商平台，欧洲本土的 H&M、Zara 等不在适用范围内。法国生态转型部长 Mathieu Lefèvre 表示这是全球首例。9月3日商务部例行新闻发布会上，新闻发言人黄玲表态"敦促法方立即停止实施"，认为该法涉嫌违反 WTO 非歧视原则，如法方一意孤行中方将采取必要措施维护中资企业权益。
+  <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9.1正式生效</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">单件最高12欧元</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">2030年19.5欧元</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">定向亚洲平台</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">商务部强硬回应</span>
+  <span class="hl-link"><a href="https://www.toutiao.com/w/1875392352690507/" target="_blank">原文链接 →</a></span>
 </div>
 <div class="highlight-card" style="border-left-color:#D32F2F;">
-  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
-  <div class="hl-body">
-    <div class="hl-title">新加坡金管局就稳定币修法征求意见，拟将稳定币监管框架写入法律</div>
-    <div class="hl-meta">9月1日</div>
-    <div class="hl-summary">综合报道（MarkRead Fintech）</div>新加坡金融管理局（MAS）9月1日就2019年《支付服务法》修订草案展开公众咨询，拟将稳定币监管框架正式写入法律。草案要求受监管发行人须以高流动性资产维持100%储备、不得向持有人支付利息或收益；并研议突破"仅限新加坡境内发行"的做法，让跨国共同发行及部分符合条件的外国稳定币有机会纳入监管。MAS表示明确规范有助于降低挤兑与储备不足风险，维持新加坡金融科技中心公信力。
-    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">100%储备要求</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">禁止付息</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">海外稳定币认可</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">支付服务法修订</span>
-    <span class="hl-link"><a href="https://radar.markreadfintech.com/event/a52c1db0-4cee-4b02-9b20-8cf56e431bd1" target="_blank">原文链接 →</a></span>
+  <div class="hl-header">
+    <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">越南加密资产违规罚款新规9月1日生效：单次最高罚款2亿越南盾（约5.6万元人民币）</div>
+      <div class="hl-meta">9月1日生效</div>
+    </div>
   </div>
+  <div class="hl-summary">Vietnam Law Magazine（《越南法律杂志》9月新政合集）</div>9月1日起，越南政府第 284/2026/ND-CP 号法令正式生效，对加密资产相关违规行为实施新的行政罚款框架：个人违规最高罚款 1 亿越南盾（约 2.8 万元人民币），机构违规最高罚款 2 亿越南盾（约 5.6 万元人民币）；情节严重者将面临刑事追责。同月越南还有多项新政生效：工资发放违规罚款（Decree 283，9月10日生效）、跨境贸易合规新规（Decree 292/2026/ND-CP，9月5日生效）、手工业区管理（Decree 303，9月15日）、大宗商品交易所规则（Decree 302，9月15日）等。加密资产监管从"灰色地带"正式进入可执行的行政罚款阶段。
+  <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9.1生效</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">个人1亿越南盾</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">机构2亿越南盾</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">行政+刑事双轨</span>
+  <span class="hl-link"><a href="https://vietnamlawmagazine.vn/new-policies-taking-effect-in-september-80487.html" target="_blank">原文链接 →</a></span>
 </div>
 <div class="highlight-card" style="border-left-color:#D32F2F;">
-  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">3</div>
-  <div class="hl-body">
-    <div class="hl-title">G20财长央行行长会议承诺推进稳定币与数字资产监管框架</div>
-    <div class="hl-meta">8月31日</div>
-    <div class="hl-summary">The Whistler</div>8月31日至9月1日在美国阿什维尔举行的G20财长与央行行长会议发表主席声明，承诺推进"负责任且有效的稳定币与数字资产监管框架"，期待金融稳定理事会（FSB）就全球稳定币安排的跨境影响提出调查结果，并重申改善跨境支付的承诺，呼吁各国延长大额支付系统运营时间并推广ISO 20022数据模型。
-    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">G20监管框架</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">FSB跨境影响调查</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">跨境支付改善</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">ISO 20022</span>
-    <span class="hl-link"><a href="https://thewhistler.ng/g20-pushes-tougher-rules-for-stablecoins-digital-assets/" target="_blank">原文链接 →</a></span>
+  <div class="hl-header">
+    <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">3</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">越南跨境贸易新规 Decree 292/2026/ND-CP 9月5日生效：收紧跨境贸易管理与外汇申报</div>
+      <div class="hl-meta">9月5日生效</div>
+    </div>
   </div>
+  <div class="hl-summary">Vietnam Law Magazine（《越南法律杂志》9月新政合集）</div>9月5日起，越南政府第 292/2026/ND-CP 号法令正式生效，对跨境贸易活动实施更严格的管理要求：包括强化贸易商资质审核、收紧外汇申报与资金进出境的合规链条、对违规行为设定更清晰的行政与刑事衔接处罚标准。该法令与同日生效的加密资产罚款 Decree 284（9.1生效）、工资发放 Decree 283（9.10生效）共同构成越南 9 月密集生效的合规升级包。对在越南市场经营或经越南转口的跨境卖家而言，需提前核查贸易商资质、外汇通道与单证链路，避免在大促旺季因合规断点导致资金或货物滞留。
+  <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9.5生效</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">收紧跨境贸易</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">外汇申报强化</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">资质审核趋严</span>
+  <span class="hl-link"><a href="https://vietnamlawmagazine.vn/new-policies-taking-effect-in-september-80487.html" target="_blank">原文链接 →</a></span>
 </div>
 
 </div>
