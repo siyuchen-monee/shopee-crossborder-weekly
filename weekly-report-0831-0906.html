@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境金融新闻周报 8.31-9.6 | Shopee 跨境金融运营团队</title>
+<style>
+  :root {
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
+    --shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:28px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1200px; margin:0 auto; padding:0 32px 20px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1200px; margin:0 auto; padding:28px 24px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 12px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .nc-tag.logistics { background:#FFF0E8; color:var(--orange-dk); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:flex; border-left:5px solid var(--orange); }
+  @media (max-width:600px) { .highlight-card { flex-direction:column; } }
+  .highlight-card .hl-num { display:flex; align-items:center; justify-content:center; min-width:70px; font-size:32px; font-weight:800; color:var(--orange); background:var(--orange-bg); }
+  .highlight-card .hl-body { padding:18px 20px; flex:1; }
+  .highlight-card .hl-body .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:6px; }
+  .highlight-card .hl-body .hl-meta { font-size:11px; color:var(--text-muted); margin-bottom:8px; }
+  .highlight-card .hl-body .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; margin-bottom:6px; }
+  .highlight-card .hl-body .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-body .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-body .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-body .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1200px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand"><span class="logo">Shopee</span></div>
+      <h1>跨境金融新闻周报</h1>
+      <div class="meta" style="margin-top:4px;">覆盖领域：跨境支付 · 电商 · 物流 · 监管</div>
+      <div class="meta" style="margin-top:2px;">重点区域：东南亚 · 拉美</div>
+      <div class="date-badge">2026年8月31日 – 9月6日</div>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><div class="num">2</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">3</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">8</div><div class="lbl">总收录</div></div>
+    </div>
+  </div>
+  <nav class="header-bar">
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#logistics">🚚 跨境物流</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="section-title" id="insights"><span>💡 本周启示</span></div>
+<div style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">银行从"服务稳定币"转向"联合发行稳定币"，竞争进入新阶段</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">21家全球金融机构（合计管理资产超65万亿美元）宣布联合发行美元稳定币，直接对标Tether、Circle主导的稳定币市场。银行系稳定币的入场，可能改变跨境支付与数字资产结算的基础设施格局，其实际采用仍取决于互通性、流动性与市场接受度。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">稳定币监管密集落地，跨境发行认可与储备合规成为焦点</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">新加坡金管局就稳定币修法征求意见（100%储备、禁止付息、有限承认海外稳定币），G20承诺推进稳定币监管框架，泰国拟限制稳定币每日转账上限。监管重心由"是否允许"转向跨境发行认可、储备与反洗钱等实施层面，跨境支付机构在不同市场的合规要求可能进一步抬升。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #3B6CF4;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#3B6CF4;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#3B6CF4;margin-bottom:6px;">电商平台旺季前抢商家，入驻门槛与扶持力度同步放宽</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">TikTok Shop自8月31日起对个体户开放免流水入驻，并叠加最高90天保证金豁免、120天佣金减免等扶持。平台在Q4旺季前加大招商力度，东南亚跨境卖家的供给竞争可能进一步加剧。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">4</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">东南亚跨境航运新航线密集开通，区域内连通性提升</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.0;">中远海控SIS1直航航线挂靠汕头广澳港、开辟粤东直航印尼通道，太平船务开通印尼—泰国周班新航线。多条跨境及区域内航运线路开通，东南亚物流网络的时效与覆盖可能进一步优化。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="payment"><span>💳 跨境支付</span></div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">HashKey HSP与ONERWAY达成战略合作，打通稳定币链上结算与法币出金</div>
+    <div class="hl-meta">9月3日</div>
+    <div class="hl-summary">Global Fintech Series</div>HashKey On-Chain的结算协议HSP与跨境支付服务商ONERWAY达成战略合作，这是HSP首次对接Web2支付机构，也是ONERWAY引入的首个Web3链上结算协议。ONERWAY持有英国EMI、欧洲PI、香港MSO、美国MSB、新加坡MPI等多地牌照，服务全球2000多家商户。双方旨在为跨境电商、游戏、SaaS等商户打通"稳定币链上结算+法币出金"通道，解决跨境结算周期长、汇损、多币种核算等痛点，HSP协议原生集成链上AML机制。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">Web2/Web3结算合作</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">稳定币+法币出金</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">多地牌照</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">2000+商户</span>
+    <span class="hl-link"><a href="https://globalfintechseries.com/banking/digital-payments/hashkey-settlement-platform-hsp-and-onerway-announce-strategic-partnership-to-shape-the-future-of-on-chain-payments-and-support-cross-border-commerce-development/" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">高盛、美银、花旗等21家机构拟联合发行美元稳定币</div>
+    <div class="hl-meta">9月1日</div>
+    <div class="hl-summary">移动支付网</div>9月1日，由高盛、美国银行、花旗、德意志银行、瑞银、桑坦德、三菱日联、富达投资等21家全球金融机构组成的联盟宣布，计划2026年下半年成立独立实体、2027年上半年发行美元稳定币，后续拓展至欧元等G7货币。该稳定币面向批发、机构及零售市场，应用场景覆盖跨境支付与数字资产结算。21家成员合计管理资产超65万亿美元，项目明确遵循美国《GENIUS法案》与欧盟MiCA框架。截至9月2日稳定币总市值约3038亿美元，消息公布后Circle股价一度下挫约6%。
+    <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">21家机构65万亿美元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">2027上半年发行</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">跨境支付结算</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">GENIUS/MiCA合规</span>
+    <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202609/04171903.html" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+<div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">🛒 平台招商</span></div>
+    <div class="nc-title" style="padding:0 20px;">TikTok Shop东南亚8月31日起个体户免流水入驻，旺季前放宽门槛</div>
+    <div class="nc-summary">自8月31日起，持有中国大陆个体工商户营业执照的商家无需第三方平台经营流水证明、无需邀请码即可申请入驻TikTok Shop东南亚跨境电商，零经验个体户也可入驻。新商家可享"飞轮计划"扶持，包括最高90天保证金豁免、最长120天佣金减免及满减券资源；成熟大商可走"亿元直通车"通道（每月最高15000美元货品补贴、单月最高10000美元广告金）。此举被视为平台在Q4旺季前抢商家、加速供给扩张。</div>
+    <div class="nc-footer"><span>8月31日</span><a href="https://www.chwang.com/news/209606782004" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">🚢 新航线</span></div>
+    <div class="nc-title" style="padding:0 20px;">太平船务开通印尼—泰国周班新航线，强化东南亚区域内连通</div>
+    <div class="nc-summary">太平船务（PIL）推出印尼—泰国新航线（ITS），连接印尼、马来西亚、新加坡、泰国四国六个港口，投入3艘船舶，首航9月5日从巴生港启航。挂靠顺序为巴生港—新加坡—林查班—曼谷—林查班—新加坡—巴生港—三宝垄—泗水—巴生港，旨在拓展东南亚区域内航线覆盖。</div>
+    <div class="nc-footer"><span>9月5日</span><a href="https://www.worldports.org/pil-launches-weekly-indonesia-thailand-service-its-to-expand-intra-southeast-asia-coverage/" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">🚢 新航线</span></div>
+    <div class="nc-title" style="padding:0 20px;">中远海控SIS1直航航线挂靠汕头广澳港，开辟粤东直航印尼通道</div>
+    <div class="nc-summary">中远海控SIS1直航航线9月4日正式挂靠汕头广澳港区，开辟粤东直航印尼的海上快车道，固定周班、全程无需中转，契合跨境电商小件、高频、多批次出货特征，支撑粤东玩具、家居用品、服装、小家电、陶瓷等轻工消费品出口印尼。</div>
+    <div class="nc-footer"><span>9月4日</span><a href="http://www.shipping-daily.com/news/detail?id=7175" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+  <div class="hl-body">
+    <div class="hl-title">泰国SEC拟限制稳定币每日500万泰铢转账上限</div>
+    <div class="hl-meta">9月3日</div>
+    <div class="hl-summary">Market Insiders / Siam Blockchain</div>泰国证券交易委员会（SEC）9月3日原则性同意加强稳定币交易监管，拟限制客户通过单一数字资产服务商每日转入、转出稳定币各不超过500万泰铢（约15万美元），并要求交易两端账户完成身份验证且属于同一客户，禁止第三方账户转入转出。规则配套旅行规则（Travel Rule）信息传递要求，旨在降低洗钱、科技犯罪及规避跨境汇款规范的风险。新规尚未生效，泰国SEC计划9月公开征求意见后正式发布。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">每日500万泰铢上限</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">禁止第三方账户</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">旅行规则</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9月征求意见</span>
+    <span class="hl-link"><a href="https://marketinsiders.in/2026/09/03/thailand-tightens-stablecoin-rules-with-new-transfer-limits/" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">2</div>
+  <div class="hl-body">
+    <div class="hl-title">新加坡金管局就稳定币修法征求意见，拟将稳定币监管框架写入法律</div>
+    <div class="hl-meta">9月1日</div>
+    <div class="hl-summary">综合报道（MarkRead Fintech）</div>新加坡金融管理局（MAS）9月1日就2019年《支付服务法》修订草案展开公众咨询，拟将稳定币监管框架正式写入法律。草案要求受监管发行人须以高流动性资产维持100%储备、不得向持有人支付利息或收益；并研议突破"仅限新加坡境内发行"的做法，让跨国共同发行及部分符合条件的外国稳定币有机会纳入监管。MAS表示明确规范有助于降低挤兑与储备不足风险，维持新加坡金融科技中心公信力。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">100%储备要求</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">禁止付息</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">海外稳定币认可</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">支付服务法修订</span>
+    <span class="hl-link"><a href="https://radar.markreadfintech.com/event/a52c1db0-4cee-4b02-9b20-8cf56e431bd1" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">3</div>
+  <div class="hl-body">
+    <div class="hl-title">G20财长央行行长会议承诺推进稳定币与数字资产监管框架</div>
+    <div class="hl-meta">8月31日</div>
+    <div class="hl-summary">The Whistler</div>8月31日至9月1日在美国阿什维尔举行的G20财长与央行行长会议发表主席声明，承诺推进"负责任且有效的稳定币与数字资产监管框架"，期待金融稳定理事会（FSB）就全球稳定币安排的跨境影响提出调查结果，并重申改善跨境支付的承诺，呼吁各国延长大额支付系统运营时间并推广ISO 20022数据模型。
+    <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">G20监管框架</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">FSB跨境影响调查</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">跨境支付改善</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">ISO 20022</span>
+    <span class="hl-link"><a href="https://thewhistler.ng/g20-pushes-tougher-rules-for-stablecoins-digital-assets/" target="_blank">原文链接 →</a></span>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.header-bar a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+</body>
+</html>
