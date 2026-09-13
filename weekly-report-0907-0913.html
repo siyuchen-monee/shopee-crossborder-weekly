@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境金融新闻周报 9.7-9.13 | Shopee 跨境金融运营团队</title>
+<style>
+  :root {
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
+    --shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:22px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1400px; margin:0 auto; padding:0 32px 18px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1400px; margin:0 auto; padding:24px 32px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 14px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .nc-tag.logistics { background:#FFF0E8; color:var(--orange-dk); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:block; border-left:5px solid var(--orange); padding:18px 22px; }
+  .highlight-card .hl-header { display:flex; align-items:flex-start; gap:12px; margin-bottom:8px; }
+  .highlight-card .hl-num { flex-shrink:0; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; color:var(--orange); background:var(--orange-bg); border-radius:50%; }
+  .highlight-card .hl-title-wrap { flex:1; }
+  .highlight-card .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:3px; line-height:1.45; }
+  .highlight-card .hl-meta { font-size:11px; color:var(--text-muted); }
+  .highlight-card .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.75; margin-bottom:8px; }
+  .highlight-card .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1400px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand"><span class="logo">Shopee</span></div>
+      <h1>跨境金融新闻周报</h1>
+      <div class="meta" style="margin-top:4px;">覆盖领域：跨境支付 · 电商 · 物流 · 监管</div>
+      <div class="meta" style="margin-top:2px;">重点区域：东南亚 · 拉美</div>
+      <div class="date-badge">2026年9月7日 – 9月13日</div>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><div class="num">3</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">2</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">7</div><div class="lbl">总收录</div></div>
+    </div>
+  </div>
+  <nav class="header-bar">
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#logistics">🚚 跨境物流</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="section-title" id="insights"><span>💡 本周启示</span></div>
+<div style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">跨境支付主线由「牌照扩张」转向「AI 代理式支付 + 信任框架」</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">本周蚂蚁国际推出代理式支付协议 AMP（首批接入10家钱包与7家收单机构、覆盖约15亿用户），并与 Visa、Mastercard 就「认识你的代理人」（KYA）信任框架达成协同；Payoneer 亦公开强调风控需覆盖 KYA 维度；Circle 则以4亿美元收购 Tazapay 补强本地出金与稳定币结算通道。几条新闻指向同一条主线：跨境支付机构正由单一抢牌照，转向「代理式支付协议 + 跨平台信任框架 + 本地收付通道」的组合卡位，AI 代理人能否被安全、可信地授权完成交易，可能成为下一阶段竞争的焦点。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF5F5;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">平台费率进入东南亚监管视野，泰国率先冻结6大平台费率6个月</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">泰国贸易竞争委员会（TCCT）本周下令 Shopee、Lazada、TikTok Shop 等6家数字平台6个月内不得上调佣金、GP 费用与促销相关费用，背景是平台各项费用已占当地卖家销售额的22%-40%、平均净利率被压缩至约2.3%。冻结期恰好覆盖9.9、双11、12.12旺季，指向东南亚平台高抽佣开始进入监管视野，费率透明度与上限可能成为后续多国跟进的政策方向。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">SCFI 七连涨但结构分化，东南亚线涨幅反超美线</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">9月11日发布的 SCFI 报3662.18点、连续第七周上涨，但结构明显分化：东南亚线周涨13.1%突破1000美元/TEU，美东线续涨至10479美元/FEU，欧洲、地中海线则走弱。国庆黄金周前集中出货、东南亚主要港口塞港与船公司空班/减班共同支撑高位，指向 Q4 备货需重点关注东南亚与美线舱位，欧洲线或存在阶段性下行窗口。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="payment"><span>💳 跨境支付</span></div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">蚂蚁国际推出代理式支付协议 AMP，首批接入17家机构、覆盖约15亿用户</div>
+      <div class="hl-meta">9月11日</div>
+    </div>
+  </div>
+  <div class="hl-summary">澎湃新闻</div>9月11日，蚂蚁国际在外滩大会上宣布其代理式移动支付协议 AMP 落地首批合作——10家数字钱包（支付宝、AlipayHK、印尼 DANA、菲律宾 GCash、韩国 KakaoPay 与 Toss、马来西亚 TNGeWallet、泰国 TrueMoney、新加坡 Starryblu 等）与7家收单机构（Adyen、Allinpay、Checkout.com、Fiserv、Global Payments、Nuvei、Worldline），首波覆盖约15亿用户。AMP 已在 GitHub 开源，具备跨设备端到端智能体交易、任务式授权、KYA 身份框架、AgentSafePay 资损兜底，以及低至0.000001美元的纳米级 A2A 结算等能力。同期蚂蚁国际与 Visa、Mastercard 就「认识你的代理人」（KYA）信任框架达成协同，统一跨平台的 AI 代理人身份与信任机制。
+  <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">AMP首批17家机构</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">首波15亿用户</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">联合Visa/Mastercard</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">GitHub开源</span>
+  <span class="hl-link"><a href="https://m.thepaper.cn/newsDetail_forward_34050074" target="_blank">原文链接 →</a></span>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">Circle 4亿美元全股票收购新加坡 B2B 跨境支付平台 Tazapay</div>
+      <div class="hl-meta">9月8日</div>
+    </div>
+  </div>
+  <div class="hl-summary">移动支付网</div>9月8日，稳定币发行方 Circle 宣布以约4亿美元全股票交易收购新加坡 B2B 跨境支付基础设施公司 Tazapay，预计2027年完成交割（需满足惯常交割条件并获得新加坡金管局等监管批准）。Tazapay 成立于2020年，年化支付处理量超250亿美元、约六成交易量涉及稳定币，提供100+市场的本地出金通道、60多家银行与金融科技合作伙伴，持有新加坡大型支付机构（MPI）牌照。此举意在补齐 Circle Payments Network 的本地承兑与出金短板，客户以跨境电商、教育科技、SaaS、旅游和游戏平台为主。
+  <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">4亿美元全股票</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">年化处理250亿美元</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">新加坡MPI牌照</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">预计2027交割</span>
+  <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202609/09091311.html" target="_blank">原文链接 →</a></span>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">3</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">Payoneer 获以色列支付牌照，全球监管版图进一步扩张</div>
+      <div class="hl-meta">9月8日</div>
+    </div>
+  </div>
+  <div class="hl-summary">Payoneer 官方新闻稿</div>9月8日，Payoneer 宣布依据以色列《支付服务与支付发起法》取得当地支付牌照，可为企业提供收款、持币与付款服务，服务对象涵盖本地企业、在以运营的跨国公司及拟进入以色列市场的企业，并强化与以色列银行的合作。Payoneer 现服务覆盖190多个国家与地区，拥有近100家银行与支付服务商合作伙伴。公司首席产品与技术官 Oren Ryngler 表示，该牌照是 Payoneer 全球监管基础设施扩张的一环。
+  <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">以色列支付牌照</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">覆盖190+国家</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">收款/持币/付款</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">强化银行合作</span>
+  <span class="hl-link"><a href="https://in.marketscreener.com/news/payoneer-global-secures-payment-license-in-israel-expanding-global-regulatory-infrastructure-and-ce785bd8de88fe20" target="_blank">原文链接 →</a></span>
+</div>
+
+<div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">⚖️ 费率监管</span></div>
+    <div class="nc-title" style="padding:0 20px;">泰国 TCCT 下令 Shopee、Lazada、TikTok Shop 等6大平台冻结费率6个月</div>
+    <div class="nc-summary">9月10日报道，泰国贸易竞争委员会（TCCT）向 Shopee、Lazada、TikTok Shop 等6家数字平台发出行政命令，要求自9月初起冻结现有平台费用、GP 费用及促销相关费用6个月，期间不得上调费率，恰好覆盖9.9、双11、12.12旺季。TCCT 将借此收集平台成本与收费结构数据、分析 GP 费率（约30%）构成，并于9月11日召开11家平台讨论会、预计9月底前发布新版监管指南。背景是平台各项费用已占泰国卖家销售额的22%-40%、平均净利率被压缩至约2.3%。</div>
+    <div class="nc-footer"><span>9月10日</span><a href="https://www.yfchuhai.com/news/10237963.html" target="_blank">原文链接 →</a></div>
+  </div>
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">📺 直播电商</span></div>
+    <div class="nc-title" style="padding:0 20px;">美客多落成首个直播电商基地 Estúdio Mercado Livre，加码巴西直播带货</div>
+    <div class="nc-summary">9月9日，美客多（Mercado Livre）在巴西圣保罗 Vila Leopoldina 落成首个直播电商专用空间 Estúdio Mercado Livre，面积193㎡、设9个独立直播间，并配有多用途空间、播客设备与小型看台，灯光、手机、网络及家具等设备免费供创作者、卖家与联盟者使用。该空间与 Community Creators Academy、California Content House 合作创建，初期面向预选名单开放，属于美客多为巴西宣布的570亿雷亚尔投资的一部分，延续9月1日上线的 Mercado Livre Live 直播购物功能。</div>
+    <div class="nc-footer"><span>9月9日</span><a href="https://mercadoeconsumo.com.br/09/09/2026/ecommerce/com-280-mil-vendas-de-creators-por-minuto-mercado-livre-agora-avanca-com-estudio-de-live-commerce/" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">📈 运价动向</span></div>
+    <div class="nc-title" style="padding:0 20px;">SCFI 连续第七周上涨：美东线1.05万美元/FEU，东南亚线周涨13.1%破千美元</div>
+    <div class="nc-summary">9月11日发布的上海出口集装箱运价指数（SCFI）报3662.18点，周涨2.0%，连续第七周上涨。分航线看：美东线10479美元/FEU（周涨1.5%）、美西线7339美元/FEU（周涨1.33%），东南亚线大涨13.1%至1010美元/TEU、突破1000美元关口，欧洲线跌3.7%至2545美元/TEU、地中海线同步走弱。运价上涨受国庆黄金周前集中出货、东南亚主要港口塞港、船公司空班/减班（9月14日至10月18日东西向主要航线预计79个空班、约占11%）支撑，呈现美线/东南亚强、欧洲弱的明显分化。</div>
+    <div class="nc-footer"><span>9月11日</span><a href="https://www.10100.com/article/150973429" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">菲律宾央行拟暂停新支付系统运营商注册12个月，强化穿透式监管</div>
+      <div class="hl-meta">9月7日</div>
+    </div>
+  </div>
+  <div class="hl-summary">移动支付网（引《马尼拉公报》）</div>9月7日，菲律宾央行（BSP）公布草案，拟暂停受理新的支付系统运营商（OPS）注册、牌照核发及相关授权申请12个月，以对支付机构分类与牌照框架进行整体检视；暂停期前已提交的申请可继续审查，但暂停期内不再批准或驳回。草案同时要求持牌机构建立覆盖第三方与线下商户的分层风控体系，禁止隐匿商户或受益所有人身份的支付结构、禁止外包商户拓展，并计划建立与全国 QR 标准联动的统一商户数据库；发现重大欺诈、网络攻击、制裁违规或未持牌商户活动，须24小时内上报。
+  <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">暂停OPS注册12个月</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">全国QR商户库</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">24小时上报</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">穿透式监管</span>
+  <span class="hl-link"><a href="https://www.mpaypass.com.cn/news/202609/07094326.html" target="_blank">原文链接 →</a></span>
+</div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.header-bar a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+</body>
+</html>
