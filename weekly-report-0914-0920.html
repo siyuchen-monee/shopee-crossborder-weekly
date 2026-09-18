@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境金融新闻周报 9.14-9.20 | Shopee 跨境金融运营团队</title>
+<style>
+  :root {
+    --orange: #F4743B; --orange-dk: #E05A26; --orange-lt: #FFF0E8; --orange-bg: #FFF7F2;
+    --white: #FFFFFF; --text: #1A1A1A; --text-secondary: #4A4F5A; --text-muted: #9499A3;
+    --border: #EAECEF; --blue: #3B6CF4; --green: #22B07D; --red: #E84A5F;
+    --shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:#F5F6F8; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .header { background:var(--white); border-bottom:1px solid var(--border); padding:22px 0 0; position:sticky; top:0; z-index:100; }
+  .header-top { max-width:1400px; margin:0 auto; padding:0 32px 18px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
+  .header-brand { display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
+  .header-brand .logo { color:var(--orange); font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .header h1 { font-size:26px; font-weight:700; letter-spacing:-0.3px; }
+  .header .meta { font-size:13px; color:var(--text-muted); margin-top:2px; }
+  .header .date-badge { display:inline-block; margin-top:8px; background:var(--orange-bg); color:var(--orange-dk); font-size:12px; font-weight:600; padding:4px 14px; border-radius:20px; }
+  .header-stats { display:flex; gap:20px; flex-wrap:wrap; }
+  .header-stat { text-align:center; min-width:50px; }
+  .header-stat .num { font-size:22px; font-weight:700; color:var(--orange); }
+  .header-stat .lbl { font-size:10px; color:var(--text-muted); }
+  .header-bar { background:var(--orange); padding:10px 32px; display:flex; justify-content:center; align-items:center; gap:8px; max-width:100%; overflow-x:auto; flex-wrap:wrap; }
+  .header-bar a { display:inline-block; color:var(--orange); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; transition:all 0.2s; background:rgba(255,255,255,0.95); padding:6px 16px; border-radius:20px; }
+  .header-bar a:hover { background:#fff; color:var(--orange-dk); transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .container { max-width:1400px; margin:0 auto; padding:24px 32px 48px; }
+  .section-title { font-size:13px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin:28px 0 14px; display:flex; align-items:center; gap:8px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .news-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:16px; margin-bottom:20px; }
+  @media (max-width:860px) { .news-grid { grid-template-columns:1fr; } }
+  .news-card { background:var(--white); border-radius:10px; padding:0; box-shadow:var(--shadow); overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column; }
+  .news-card:hover { box-shadow:0 2px 12px rgba(244,116,59,0.1); }
+  .news-card .nc-top { padding:18px 20px 0; flex-shrink:0; }
+  .news-card .nc-tag { display:inline-block; font-size:10px; font-weight:700; padding:3px 8px; border-radius:3px; margin-bottom:8px; }
+  .nc-tag.ecom { background:#EEF3FF; color:var(--blue); }
+  .nc-tag.logistics { background:#FFF0E8; color:var(--orange-dk); }
+  .news-card .nc-title { font-size:14px; font-weight:700; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .news-card .nc-summary { font-size:12.5px; color:var(--text-secondary); line-height:1.7; padding:0 20px 16px; flex:1; }
+  .news-card .nc-footer { padding:10px 20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .news-card .nc-footer a { color:var(--orange); text-decoration:none; font-weight:600; }
+  .news-card .nc-footer a:hover { text-decoration:underline; }
+  .highlight-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; display:block; border-left:5px solid var(--orange); padding:18px 22px; }
+  .highlight-card .hl-header { display:flex; align-items:flex-start; gap:12px; margin-bottom:8px; }
+  .highlight-card .hl-num { flex-shrink:0; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; color:var(--orange); background:var(--orange-bg); border-radius:50%; }
+  .highlight-card .hl-title-wrap { flex:1; }
+  .highlight-card .hl-title { font-size:15px; font-weight:700; color:var(--text); margin-bottom:3px; line-height:1.45; }
+  .highlight-card .hl-meta { font-size:11px; color:var(--text-muted); }
+  .highlight-card .hl-summary { font-size:13px; color:var(--text-secondary); line-height:1.75; margin-bottom:8px; }
+  .highlight-card .hl-point { display:inline-block; background:var(--orange-bg); color:var(--orange-dk); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; margin:3px 4px 0 0; }
+  .highlight-card .hl-link { display:block; text-align:right; font-size:10px; margin-top:8px; }
+  .highlight-card .hl-link a { color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .highlight-card .hl-link a:hover { color:var(--orange); }
+  .footer { text-align:center; padding:16px; color:var(--text-muted); font-size:11px; max-width:1400px; margin:0 auto; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .news-card, .highlight-card { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand"><span class="logo">Shopee</span></div>
+      <h1>跨境金融新闻周报</h1>
+      <div class="meta" style="margin-top:4px;">覆盖领域：跨境支付 · 电商 · 物流 · 监管</div>
+      <div class="meta" style="margin-top:2px;">重点区域：东南亚 · 拉美</div>
+      <div class="date-badge">2026年9月14日 – 9月20日</div>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><div class="num">2</div><div class="lbl">跨境支付</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">电商平台</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">跨境物流</div></div>
+      <div class="header-stat"><div class="num">1</div><div class="lbl">监管动向</div></div>
+      <div class="header-stat"><div class="num">5</div><div class="lbl">总收录</div></div>
+    </div>
+  </div>
+  <nav class="header-bar">
+    <a href="#insights">💡 本周启示</a>
+    <a href="#payment">💳 跨境支付</a>
+    <a href="#ecommerce">🛒 电商平台</a>
+    <a href="#logistics">🚚 跨境物流</a>
+    <a href="#regulatory">⚖️ 监管动向</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="section-title" id="insights"><span>💡 本周启示</span></div>
+<div style="margin-bottom:28px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">1</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">跨境支付主线再添一层：央行数字货币与央行间互联互通加速落地</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">本周蚂蚁国际与工商银行上海分行完成首笔数字人民币跨境调拨，数亿元资金实现秒级到账；同周中老两国央行正式启动跨境数字支付互联互通。两条新闻指向同一趋势——在牌照、代理式支付协议与钱包互联互通之外，央行数字货币（CBDC）与央行间支付互联互通正成为跨境支付的新基础设施变量。对跨境支付服务商而言，能否接入并驾驭央行数字货币与区域互联互通网络，可能成为下一阶段差异化竞争的关键点。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF5F5;border-radius:10px;border-left:4px solid #D32F2F;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#D32F2F;">2</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#D32F2F;margin-bottom:6px;">合规义务前移：平台代征与支付工具区隔将同步落地</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">印尼宣布电商平台代扣卖家所得税提前至10月1日，Shopee、Tokopedia、Lazada、Blibli 四大平台按营业额0.5%代扣；中国央行等八部门则要求支付机构自9月30日起将支付工具与贷款、金融产品区隔展示。两者分属税务征管与支付营销规范，但指向一致——平台与支付机构的合规动作正在越来越多地在交易环节直接完成，卖家与机构的合规成本与操作复杂度可能同步抬升。</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#FFF7F2;border-radius:10px;border-left:4px solid #F4743B;">
+      <span style="font-size:22px;min-width:30px;font-weight:800;color:#F4743B;">3</span>
+      <div>
+        <div style="font-weight:700;font-size:15px;color:#F4743B;margin-bottom:6px;">集运运价高位震荡，涨幅收窄提示节后动能转弱</div>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:1.75;">SCFI 综合指数本周报3687.83点续涨，但环比涨幅由上周的72.13点收窄至25.65点，CCFI 同步上涨1.9%。国庆节前出货潮仍是短期支撑，但涨幅明显收窄提示运价上涨动能正在减弱，节后需求回落叠加港口拥堵缓解，运价可能面临阶段性回调，值得在节前备货与运费预算上提前留意。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title" id="payment"><span>💳 跨境支付</span></div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">1</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">中老跨境数字支付互联互通正式启动，两国央行联合推进跨境结算</div>
+      <div class="hl-meta">9月18日</div>
+    </div>
+  </div>
+  <div class="hl-summary">新浪财经（央行）</div>9月18日，中国人民银行与老挝央行在广西南宁联合举办启动会，正式启动中老跨境数字支付互联互通。此举是落实两国央行行长2026年6月签署的《关于加强金融创新、数字支付和法定数字货币合作的谅解备忘录》的阶段性成果，中国人民银行副行长陆磊、老挝央行副行长苏里萨克·萨姆努翁出席并致辞，两国商业银行及参与企业负责人参会。双方将以此为基础，持续拓展跨境数字支付与法定数字货币合作，便利双边贸易与人员往来的跨境结算。
+  <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">两国央行启动</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">数字支付互联互通</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">落实6月备忘录</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">便利双边结算</span>
+  <span class="hl-link"><a href="https://finance.sina.com.cn/money/bank/2026-09-18/doc-inisfyev3240488.shtml" target="_blank">原文链接 →</a></span>
+</div>
+<div class="highlight-card" style="border-left-color:#F4743B;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#F4743B;background:#FFF7F2;">2</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">蚂蚁国际与工行上海分行完成首笔数字人民币跨境调拨，数亿元资金秒级到账</div>
+      <div class="hl-meta">9月16日</div>
+    </div>
+  </div>
+  <div class="hl-summary">上海市地方金融监督管理局（澎湃新闻）</div>9月16日，工商银行上海分行通过数字人民币为蚂蚁国际完成向工银亚洲的数亿元跨境资金划转，实现秒级到账，较传统跨境支付数天清算周期大幅提速。双方依托"北京数字人民币运营管理中心＋上海数字人民币国际运营中心"双中心架构，并借助上海自贸区制度创新与香港人民币清算中心功能，后续以上海、香港为中心，逐步扩展至东南亚、欧洲等地区，探索多元跨境人民币支付与司库场景。
+  <span class="hl-point" style="background:#FFF7F2;color:#E05A26;">数亿元秒级到账</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">双中心架构</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">自贸区＋香港枢纽</span><span class="hl-point" style="background:#FFF7F2;color:#E05A26;">扩展东南亚欧洲</span>
+  <span class="hl-link"><a href="https://jrj.sh.gov.cn/YX180/20260917/3bae181088234b5189a2c226d71ce12f.html" target="_blank">原文链接 →</a></span>
+</div>
+
+<div class="section-title" id="ecommerce"><span>🛒 电商平台</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag ecom">🏛️ 税务代征</span></div>
+    <div class="nc-title" style="padding:0 20px;">印尼电商平台代征卖家所得税提前至10月1日，Shopee等四平台按营业额0.5%代扣</div>
+    <div class="nc-summary">9月18日报道，印尼将电商平台代扣卖家所得税（PPh 22）由原定11月提前至10月1日实施，Shopee Indonesia、Tokopedia、Lazada Indonesia、Blibli 四大平台被指定为代扣方，按卖家商品交易营业额的0.5%代扣，计税基数为营业额而非利润。年营业额5亿印尼盾以下的个人卖家，向平台提交声明后可豁免代扣；公司主体店铺不适用豁免。跨境卖家若已在印尼注册本地主体并持有税号，可凭凭证在年度汇算时抵扣；无本地税号的直发卖家一旦被代扣，该部分税款将成为净成本。</div>
+    <div class="nc-footer"><span>9月18日</span><a href="https://www.ksher.cn/news/post/kjzx26091804/" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="logistics"><span>🚚 跨境物流</span></div>
+<div class="news-grid">
+  <div class="news-card">
+    <div class="nc-top"><span class="nc-tag logistics">📈 运价动向</span></div>
+    <div class="nc-title" style="padding:0 20px;">SCFI 报3687.83点续涨但涨幅收窄，CCFI 涨1.9%</div>
+    <div class="nc-summary">截至9月18日，上海出口集装箱运价指数（SCFI）综合指数报3687.83点，较上期上涨25.65点，涨幅较上期（+72.13点）明显收窄；中国出口集装箱运价综合指数（CCFI）报1897.15点，环比上涨1.9%。临近国庆节前出货高峰，运价仍获短期需求支撑，但上涨动能明显减弱，市场关注节后需求回落后的运价走势。</div>
+    <div class="nc-footer"><span>9月18日</span><a href="https://jg-static.eeo.com.cn/article/info?id=a2317c59ce8e44cfbce296a9bdc319b3" target="_blank">原文链接 →</a></div>
+  </div>
+</div>
+
+<div class="section-title" id="regulatory"><span>⚖️ 监管动向</span></div>
+<div class="highlight-card" style="border-left-color:#D32F2F;">
+  <div class="hl-header">
+    <div class="hl-num" style="color:#D32F2F;background:#FFF0F0;">1</div>
+    <div class="hl-title-wrap">
+      <div class="hl-title">央行等八部门《金融产品网络营销管理办法》9月30日实施，支付工具不得捆绑贷款与金融产品</div>
+      <div class="hl-meta">9月16日</div>
+    </div>
+  </div>
+  <div class="hl-summary">新浪财经</div>9月16日，央行会同工信部、市场监管总局等八部门4月印发的《金融产品网络营销管理办法》引发关注，办法将于9月30日起正式实施。其中第十二条明确，非银行支付机构不得将贷款、资产管理产品等金融产品列入支付工具选项，也不得为上述产品提供营销服务；收银台须将银行卡、账户余额等支付工具与贷款、理财等金融产品分区独立展示，禁止默认勾选或诱导购买。监管同时澄清，"零钱通、余额宝不能付款"系误读，相关功能仍可正常使用。
+  <span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">9月30日实施</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">支付工具与金融产品区隔</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">禁止默认勾选</span><span class="hl-point" style="background:#FFF0F0;color:#D32F2F;">澄清余额宝误读</span>
+  <span class="hl-link"><a href="https://finance.sina.com.cn/wm/2026-09-16/doc-iniryzma2986951.shtml" target="_blank">原文链接 →</a></span>
+</div>
+
+</div>
+
+<div class="footer">跨境金融新闻周报 · 仅供团队内部参考</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.header-bar a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (!target) return;
+      const header = document.querySelector('.header');
+      const h = header ? header.offsetHeight : 200;
+      const top = target.getBoundingClientRect().top + window.scrollY - h - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+</body>
+</html>
